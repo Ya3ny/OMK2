@@ -1,0 +1,2809 @@
+[
+    {
+        "id": "da02098a.71f338",
+        "type": "tab",
+        "label": "RECIPE",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6f435616.8d0098",
+        "type": "tab",
+        "label": "pH",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8a5b69b.90c6998",
+        "type": "tab",
+        "label": "NMCU_RELAY",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a685515c.958ab",
+        "type": "tab",
+        "label": "NMCU_SENSE",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2fcdbf94.43f2d",
+        "type": "tab",
+        "label": "NMCU_SMPP",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "620cacdb.71a004",
+        "type": "tab",
+        "label": "RPi",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "332dae2f.8d7c52",
+        "type": "tab",
+        "label": "IDEAL",
+        "disabled": false,
+        "info": "The \"IDEAL\" tab should include:\n\n- UI nodes to display all sensor readings\n- Relay/power switches\n- Remote control functionality"
+    },
+    {
+        "id": "3b2a6f90.9c941",
+        "type": "subflow",
+        "name": "Change Text Color based on State",
+        "info": "This sample could be used to notify user if nutes/\nacid/base was dosed recently",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "28204ca.98d06b4",
+        "type": "ui_base",
+        "z": 0,
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "default": "#4B7930",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": true
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "OASIS_MK1",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "dateFormat": "YYYY/MM/DD",
+            "sizes": {
+                "sx": 41,
+                "sy": 41,
+                "gx": 14,
+                "gy": 10,
+                "cx": 6,
+                "cy": 15,
+                "px": 0,
+                "py": 5
+            }
+        }
+    },
+    {
+        "id": "9ef04463.7a7778",
+        "type": "ui_tab",
+        "z": "",
+        "name": "SA",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "a4377e8.8778b8",
+        "type": "ui_group",
+        "z": "",
+        "name": "VARIABLES",
+        "tab": "9ef04463.7a7778",
+        "order": 2,
+        "disp": false,
+        "width": "4"
+    },
+    {
+        "id": "993941ff.6542",
+        "type": "ui_tab",
+        "z": "",
+        "name": "SENSE",
+        "icon": "dashboard",
+        "order": 2
+    },
+    {
+        "id": "f10466fd.86eac8",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "b9b4d80f.9a9a28",
+        "type": "ui_tab",
+        "z": "",
+        "name": "RPi",
+        "icon": "dashboard",
+        "order": 5
+    },
+    {
+        "id": "db6e0761.6988e8",
+        "type": "ui_group",
+        "z": "",
+        "name": "System",
+        "tab": "b9b4d80f.9a9a28",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "e6d32b22.f972c8",
+        "type": "light-scheduler-settings",
+        "z": "",
+        "name": "my settings",
+        "latitude": "0",
+        "longitude": "0"
+    },
+    {
+        "id": "7e7af964.28bb48",
+        "type": "ui_group",
+        "z": "",
+        "name": "NMCU_RELAY",
+        "tab": "9ef04463.7a7778",
+        "order": 1,
+        "disp": false,
+        "width": "4"
+    },
+    {
+        "id": "e5023f0d.fc9fc",
+        "type": "ui_group",
+        "z": "",
+        "name": "NMCU_SENSE",
+        "tab": "993941ff.6542",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "b9edc3ba.a7f13",
+        "type": "ui_group",
+        "z": "",
+        "name": "Recipe",
+        "tab": "9ef04463.7a7778",
+        "order": 4,
+        "disp": true,
+        "width": "9"
+    },
+    {
+        "id": "b83c8b6f.4d1368",
+        "type": "ui_group",
+        "z": "",
+        "name": "pH",
+        "tab": "9ef04463.7a7778",
+        "order": 5,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "f3766478.27b9a8",
+        "type": "ui_group",
+        "z": "",
+        "name": "S1",
+        "tab": "a1a90124.f703",
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "a1a90124.f703",
+        "type": "ui_tab",
+        "z": "",
+        "name": "bnee",
+        "icon": "dashboard"
+    },
+    {
+        "id": "eef1226c.a6eaa",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "a1a90124.f703",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "7742d0bd.4e3f1",
+        "type": "ui_group",
+        "z": "",
+        "name": "Group 3",
+        "tab": "a1a90124.f703",
+        "order": 3,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "78cc1bfe.0d3f04",
+        "type": "ui_group",
+        "name": "Group 4",
+        "tab": "a1a90124.f703",
+        "order": 4,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "684160e7.d25ce",
+        "type": "ui_group",
+        "z": "",
+        "name": "CMD",
+        "tab": "9ef04463.7a7778",
+        "order": 3,
+        "disp": true,
+        "width": "3"
+    },
+    {
+        "id": "e3fdda17.8ad268",
+        "type": "inject",
+        "z": "6f435616.8d0098",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "0.1",
+        "crontab": "",
+        "once": false,
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "83822abd.4e2258"
+            ]
+        ]
+    },
+    {
+        "id": "b1851d51.0473d",
+        "type": "ui_numeric",
+        "z": "6f435616.8d0098",
+        "name": "Ideal pH",
+        "label": "Ideal",
+        "group": "b83c8b6f.4d1368",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": "5",
+        "max": "7",
+        "step": "0.1",
+        "x": 80,
+        "y": 40,
+        "wires": [
+            [
+                "fdea5418.e87008"
+            ]
+        ]
+    },
+    {
+        "id": "83822abd.4e2258",
+        "type": "function",
+        "z": "6f435616.8d0098",
+        "name": "pH dose calc",
+        "func": "var pHa = global.get(\"pHLVL\");\nvar pHb = global.get(\"pHgoal\");\nvar pHgoal = global.get(\"pHgoal\");\nvar pHLVL=global.get(\"pHLVL\");\nvar WL = global.get(\"WL\");  // [L]\nvar Macid = 0.04;  //85% phosphoric acid [14.8 mol/L]\nvar Mbase = 0.03; //45% potassium hydroxide [11.7 mol/L]\nvar Ha=Math.pow(10,-pHa);   // [mol/L]\nvar Hb=Math.pow(10,-pHb);   // [mol/L]\nvar dH=Math.abs(Hb-Ha);     // [mol/L]\nvar pHmax = pHgoal+0.3;\nvar pHmin = pHgoal-0.2;\nvar base_dose;\nvar acid_dose;\nvar dose;\nvar doseL;\nvar doseml;\n\nvar msgX = { payload: 0 };\nvar msg2 = { payload:\"pH:\"+pHLVL };\nvar msg3 = { payload:\"pHgoal: \"+pHgoal };\nvar msg4 = { payload: doseml };\nvar msg5 = { payload:\"dH: \"+dH };\nvar msg6 = { payload:\"WL: \"+WL+\"L\" };\nvar msg7 = { payload:\"Ha: \"+Ha };\nvar msg8 = { payload:\"Hb: \"+Hb };\nvar msg9 = { payload:\"Dose: \"+doseml+\" ml\" };\n\nif (pHa>pHmax){\n  doseL=dH/Mbase*WL;\n  doseml=(Math.round(doseL*1000*1000)/1000).toFixed(3);\n  msg4.payload=doseml;\n  msg8.payload=\"Dose acid:\"+doseml+\"ml\";\n  return [ [msg4],[msgX],[msg2,msg3,msg5,msg8] ];\n}\n\nif (pHa<pHmin){\n  doseL=dH/Mbase*WL;\n  doseml=(Math.round(doseL*1000*1000)/1000).toFixed(3);\n  msg4.payload=doseml;\n  msg8.payload=\"Dose alkali:\"+doseml+\"ml\";\n  return [ [msgX],[msg4],[msg2,msg3,msg5,msg8] ];\n}\n\nelse {\n  return [ [msgX],[msgX],[msg2,msg3,msg5] ];\n}\n",
+        "outputs": "3",
+        "noerr": 0,
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "f3748e51.2e204"
+            ],
+            [
+                "13468c2d.979534"
+            ],
+            [
+                "344aaa51.68b736"
+            ]
+        ],
+        "outputLabels": [
+            "pHd",
+            "pH+",
+            "info"
+        ]
+    },
+    {
+        "id": "fdea5418.e87008",
+        "type": "function",
+        "z": "6f435616.8d0098",
+        "name": "Global",
+        "func": "global.set(\"pHgoal\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da275388.3c263",
+        "type": "ui_button",
+        "z": "620cacdb.71a004",
+        "name": "",
+        "group": "db6e0761.6988e8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Shut Down",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "55b18c55.7dfbf4"
+            ]
+        ]
+    },
+    {
+        "id": "55b18c55.7dfbf4",
+        "type": "exec",
+        "z": "620cacdb.71a004",
+        "command": "sudo shutdown -h now",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "shutdown -h now",
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b63a2c3a.3f103",
+        "type": "ui_button",
+        "z": "620cacdb.71a004",
+        "name": "",
+        "group": "db6e0761.6988e8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reboot",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "8d8ae352.51f76"
+            ]
+        ]
+    },
+    {
+        "id": "8d8ae352.51f76",
+        "type": "exec",
+        "z": "620cacdb.71a004",
+        "command": "sudo shutdown -r now",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "shutdown -r now",
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "21f2c24a.c71a2e",
+        "type": "mqtt out",
+        "z": "2fcdbf94.43f2d",
+        "name": "N1",
+        "topic": "NMCU_SMPP/N1",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 130,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7bee16df.64f158",
+        "type": "ui_button",
+        "z": "2fcdbf94.43f2d",
+        "name": "dose N1",
+        "group": "b9edc3ba.a7f13",
+        "order": 12,
+        "width": "3",
+        "height": "2",
+        "passthru": false,
+        "label": "dose FM",
+        "color": "white",
+        "bgcolor": "MediumOrchid",
+        "icon": "opacity",
+        "payload": "dose",
+        "payloadType": "str",
+        "topic": "NMCU_SMPP/N1",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "21f2c24a.c71a2e"
+            ]
+        ]
+    },
+    {
+        "id": "e773737a.f7a28",
+        "type": "mqtt out",
+        "z": "2fcdbf94.43f2d",
+        "name": "N2",
+        "topic": "NMCU_SMPP/N2",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 370,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6b77c808.6fbe98",
+        "type": "ui_button",
+        "z": "2fcdbf94.43f2d",
+        "name": "dose N2",
+        "group": "b9edc3ba.a7f13",
+        "order": 13,
+        "width": "3",
+        "height": "2",
+        "passthru": false,
+        "label": "dose FG",
+        "color": "white",
+        "bgcolor": "PaleGreen",
+        "icon": "opacity",
+        "payload": "dose",
+        "payloadType": "str",
+        "topic": "NMCU_SMPP/N2",
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "e773737a.f7a28"
+            ]
+        ]
+    },
+    {
+        "id": "a9df6e9a.d9a26",
+        "type": "mqtt out",
+        "z": "2fcdbf94.43f2d",
+        "name": "N3",
+        "topic": "NMCU_SMPP/N3",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 610,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "513dab4d.59b0e4",
+        "type": "ui_button",
+        "z": "2fcdbf94.43f2d",
+        "name": "dose N3",
+        "group": "b9edc3ba.a7f13",
+        "order": 14,
+        "width": "3",
+        "height": "2",
+        "passthru": false,
+        "label": "dose FB",
+        "color": "white",
+        "bgcolor": "HotPink",
+        "icon": "opacity",
+        "payload": "dose",
+        "payloadType": "str",
+        "topic": "NMCU_SMPP/N3",
+        "x": 620,
+        "y": 100,
+        "wires": [
+            [
+                "a9df6e9a.d9a26"
+            ]
+        ]
+    },
+    {
+        "id": "c2747c87.e1a14",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b9edc3ba.a7f13",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "name": "N2 calc dose",
+        "label": "",
+        "format": "<font color= palegreen > {{msg.payload}} mL </font>",
+        "layout": "col-center",
+        "x": 390,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "473a9231.7fc3fc",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b9edc3ba.a7f13",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "name": "N1 calc dose",
+        "label": "",
+        "format": "<font color= MediumOrchid > {{msg.payload}} mL </font>",
+        "layout": "col-center",
+        "x": 150,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "bd7a4b31.7a2878",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b9edc3ba.a7f13",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "name": "N3 calc dose",
+        "label": "",
+        "format": "<font color= hotpink > {{msg.payload}} mL </font>",
+        "layout": "col-center",
+        "x": 630,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e7ca4f50.9340e",
+        "type": "mqtt out",
+        "z": "2fcdbf94.43f2d",
+        "name": "NMCU_SMPP/pHd",
+        "topic": "NMCU_SMPP/pHd",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 410,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "3ce8ff69.04339",
+        "type": "ui_button",
+        "z": "2fcdbf94.43f2d",
+        "name": "",
+        "group": "b83c8b6f.4d1368",
+        "order": 10,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "dose Acid",
+        "color": "",
+        "bgcolor": "OrangeRed",
+        "icon": "opacity",
+        "payload": "dose",
+        "payloadType": "str",
+        "topic": "NMCU_SMPP/pHd",
+        "x": 380,
+        "y": 500,
+        "wires": [
+            [
+                "e7ca4f50.9340e",
+                "b94a5552.c0b8d8"
+            ]
+        ]
+    },
+    {
+        "id": "ba77aff3.7edaf",
+        "type": "mqtt out",
+        "z": "8a5b69b.90c6998",
+        "name": "R1",
+        "topic": "NMCU_RELAY/R1",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 670,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "b3d0f995.cbaa28",
+        "type": "mqtt out",
+        "z": "8a5b69b.90c6998",
+        "name": "R2",
+        "topic": "NMCU_RELAY/R2",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 670,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5a25d056.81682",
+        "type": "mqtt out",
+        "z": "8a5b69b.90c6998",
+        "name": "R3",
+        "topic": "NMCU_RELAY/R3",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 670,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "5e371770.265d68",
+        "type": "mqtt out",
+        "z": "8a5b69b.90c6998",
+        "name": "R4",
+        "topic": "NMCU_RELAY/R4",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 670,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2cc901a3.0a70fe",
+        "type": "ui_switch",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "label": "R1 [NR+]",
+        "group": "7e7af964.28bb48",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "NMCU_RELAY/R1",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 520,
+        "y": 20,
+        "wires": [
+            [
+                "ba77aff3.7edaf"
+            ]
+        ]
+    },
+    {
+        "id": "31f70927.7d9316",
+        "type": "ui_switch",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "label": "R2 [MIST]",
+        "group": "7e7af964.28bb48",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "NMCU_RELAY/R2",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 520,
+        "y": 80,
+        "wires": [
+            [
+                "b3d0f995.cbaa28"
+            ]
+        ]
+    },
+    {
+        "id": "1a80b315.0eac1d",
+        "type": "ui_switch",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "label": "R3 [FAN]",
+        "group": "7e7af964.28bb48",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "NMCU_RELAY/R3",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "5a25d056.81682"
+            ]
+        ]
+    },
+    {
+        "id": "db1c5cc2.248fd",
+        "type": "ui_switch",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "label": "R4 [RO SYS]",
+        "group": "7e7af964.28bb48",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "NMCU_RELAY/R4",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 530,
+        "y": 200,
+        "wires": [
+            [
+                "5e371770.265d68"
+            ]
+        ]
+    },
+    {
+        "id": "a9ea6e7a.262a6",
+        "type": "mqtt out",
+        "z": "8a5b69b.90c6998",
+        "name": "R5",
+        "topic": "NMCU_RELAY/R5",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 670,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b90b9609.5ad758",
+        "type": "ui_switch",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "label": "R5 [SMPP]",
+        "group": "7e7af964.28bb48",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "NMCU_RELAY/R5",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "a9ea6e7a.262a6"
+            ]
+        ]
+    },
+    {
+        "id": "b0b8a2b4.99d18",
+        "type": "function",
+        "z": "6f435616.8d0098",
+        "name": "Global pH",
+        "func": "global.set(\"pHLVL\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 220,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d921468c.c83768",
+        "type": "mqtt in",
+        "z": "6f435616.8d0098",
+        "name": "pH",
+        "topic": "sense/pH",
+        "qos": "2",
+        "broker": "f10466fd.86eac8",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "b0b8a2b4.99d18",
+                "605b0be6.888984",
+                "b37043e7.fcab1",
+                "19933cc6.554d13"
+            ]
+        ]
+    },
+    {
+        "id": "f83ae3c6.9967",
+        "type": "mqtt out",
+        "z": "6f435616.8d0098",
+        "name": "NMCU_SENSE",
+        "topic": "sense/pH",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 280,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "665daa7d.c54354",
+        "type": "ui_button",
+        "z": "6f435616.8d0098",
+        "name": "",
+        "group": "e5023f0d.fc9fc",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Measure pH",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "measure",
+        "payloadType": "str",
+        "topic": "sense/pH",
+        "x": 95,
+        "y": 280,
+        "wires": [
+            [
+                "f83ae3c6.9967"
+            ]
+        ]
+    },
+    {
+        "id": "173d1a6f.a78646",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "T [AIR]",
+        "topic": "sense/AIR/T",
+        "qos": "2",
+        "broker": "f10466fd.86eac8",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "ed67ec8a.b3401"
+            ]
+        ]
+    },
+    {
+        "id": "dedcf624.7091f8",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "Humidity [AIR]",
+        "topic": "sense/AIR/H",
+        "qos": "2",
+        "broker": "f10466fd.86eac8",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "c9fd7fa3.0a7c"
+            ]
+        ]
+    },
+    {
+        "id": "c9fd7fa3.0a7c",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Humidity",
+        "format": "{{msg.payload}} %",
+        "layout": "row-spread",
+        "x": 240,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "99a41d4f.f29a5",
+        "type": "ui_text",
+        "z": "da02098a.71f338",
+        "group": "b9edc3ba.a7f13",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "name": "GS Name",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 440,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c9642208.ae9ff",
+        "type": "function",
+        "z": "da02098a.71f338",
+        "name": "Nute Recipe",
+        "func": "/*  Nute Dose - Update  */\n\nvar NS     = global.get(\"NS\")/100; //nute strength\nvar ECLVL  = global.get(\"ECLVL\");\nvar ECgoal = global.get(\"ECgoal\");\nvar WL     = global.get(\"WL\");\nvar GS     = global.get(\"GS\");\n\nvar ECf = (ECgoal-ECLVL)/ECgoal;    //EC factor\n\nvar NT; // nute total dose\n\nvar msg1={};\nvar msg2={};\nvar msg3={};\nvar msg4={};\n\nvar msg5 = { payload:\"EC: \"+ECLVL };\nvar msg6 = { payload:\"EC goal: \"+ECgoal };\nvar msg7 = { payload:\"GS: \"+GS };\nvar msg8 = { payload:\"NS: \"+NS };\n\n\nif (GS==\"1\"){\n  NT=2*NS*WL;   //*ECf;\n  msg1.payload=(NT*0.33).toFixed(2);\n  msg2.payload=(NT*0.33).toFixed(2);\n  msg3.payload=(NT*0.33).toFixed(2);\n  msg4.payload=\"Seedling\";\n  return [ [msg1],[msg2],[msg3],[msg4],[msg5,msg6,msg7,msg8] ];\n}\nelse if (GS==\"2\"){\n  NT=5.3*NS*WL;\n  msg1.payload=(NT*0.38).toFixed(2);\n  msg2.payload=(NT*0.5).toFixed(2);\n  msg3.payload=(NT*0.13).toFixed(2);\n  msg4.payload=\"Early Growth\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"3\"){\n  NT=6.6*NS*WL;\n  msg1.payload=(NT*0.4).toFixed(2);\n  msg2.payload=(NT*0.4).toFixed(2);\n  msg3.payload=(NT*0.2).toFixed(2);\n  msg4.payload=\"Late Growth\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"4\"){\n  NT=6*NS*WL;\n  msg1.payload=(NT*0.33).toFixed(2);\n  msg2.payload=(NT*0.33).toFixed(2);\n  msg3.payload=(NT*0.33).toFixed(2);\n  msg4.payload=\"Transition\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"5\"){\n  NT=5.3*NS*WL;\n  msg1.payload=(NT*0.38).toFixed(2);\n  msg2.payload=(NT*0.13).toFixed(2);\n  msg3.payload=(NT*0.5).toFixed(2);\n  msg4.payload=\"Early Bloom1\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"6\"){\n  NT=5.3*NS*WL;\n  msg1.payload=(NT*0.38).toFixed(2);\n  msg2.payload=(NT*0.13).toFixed(2);\n  msg3.payload=(NT*0.5).toFixed(2);\n  msg4.payload=\"Early Bloom2\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"7\"){\n  NT=5.9*NS*WL;\n  msg1.payload=(NT*0.33).toFixed(2);\n  msg2.payload=(NT*0.11).toFixed(2);\n  msg3.payload=(NT*0.56).toFixed(2);\n  msg4.payload=\"Mid Bloom1\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"8\"){\n  NT=5.9*NS*WL;\n  msg1.payload=(NT*0.33).toFixed(2);\n  msg2.payload=(NT*0.11).toFixed(2);\n  msg3.payload=(NT*0.56).toFixed(2);\n  msg4.payload=\"Mid Bloom2\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"9\"){\n  NT=5.9*NS*WL;\n  msg1.payload=(NT*0.33).toFixed(2);\n  msg2.payload=(NT*0).toFixed(2);\n  msg3.payload=(NT*0.67).toFixed(2);\n  msg4.payload=\"Mid Bloom3\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"10\"){\n  NT=5.9*NS*WL;\n  msg1.payload=(NT*0.33).toFixed(2);\n  msg2.payload=(NT*0).toFixed(2);\n  msg3.payload=(NT*0.67).toFixed(2);\n  msg4.payload=\"Late Bloom1\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"8\"){\n  NT=5.9*NS*WL;\n  msg1.payload=(NT*0.33).toFixed(2);\n  msg2.payload=(NT*0.11).toFixed(2);\n  msg3.payload=(NT*0.56).toFixed(2);\n  msg4.payload=\"Late Bloom2\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"11\"){\n  NT=4*NS*WL;\n  msg1.payload=(NT*0).toFixed(2);\n  msg2.payload=(NT*0).toFixed(2);\n  msg3.payload=(NT*1.00).toFixed(2);\n  msg4.payload=\"Ripen\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}\nelse if (GS==\"12\"){\n  NT=4*NS*WL;\n  msg1.payload=NT*0;\n  msg2.payload=NT*0;\n  msg3.payload=NT*0;\n  msg4.payload=\"HARVEST!\";\n  return [ [msg1],[msg2],[msg3],[msg4] ];\n}",
+        "outputs": "4",
+        "noerr": 0,
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "5f3531c2.21512"
+            ],
+            [
+                "8693b15b.7d202"
+            ],
+            [
+                "57316464.63179c"
+            ],
+            [
+                "99a41d4f.f29a5"
+            ]
+        ],
+        "outputLabels": [
+            "N1",
+            "N2",
+            "N3",
+            "GS"
+        ]
+    },
+    {
+        "id": "e11314af.c0e388",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "N2 Calculated Dose",
+        "links": [
+            "23f84146.9a691e"
+        ],
+        "x": 275,
+        "y": 60,
+        "wires": [
+            [
+                "c2747c87.e1a14",
+                "e773737a.f7a28"
+            ]
+        ]
+    },
+    {
+        "id": "d8487d4e.f892",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "N3 Calculated Dose",
+        "links": [
+            "9d7e6e8e.72fac"
+        ],
+        "x": 515,
+        "y": 60,
+        "wires": [
+            [
+                "bd7a4b31.7a2878",
+                "a9df6e9a.d9a26"
+            ]
+        ]
+    },
+    {
+        "id": "25cb2ce8.04d634",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "pHd Calculated Dose",
+        "links": [
+            "f3748e51.2e204"
+        ],
+        "x": 295,
+        "y": 420,
+        "wires": [
+            [
+                "d98ea005.7f6ca"
+            ]
+        ]
+    },
+    {
+        "id": "f3748e51.2e204",
+        "type": "link out",
+        "z": "6f435616.8d0098",
+        "name": "pHd Calculated Dose",
+        "links": [
+            "25cb2ce8.04d634",
+            "fb1457ca.ac3ce8"
+        ],
+        "x": 315,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5f3531c2.21512",
+        "type": "link out",
+        "z": "da02098a.71f338",
+        "name": "N1 calculated dose",
+        "links": [
+            "ad2263cb.270ee",
+            "a194cb5c.3be8a8"
+        ],
+        "x": 395,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "23f84146.9a691e",
+        "type": "link out",
+        "z": "da02098a.71f338",
+        "name": "N2 Calculated dose",
+        "links": [
+            "e11314af.c0e388",
+            "f7e7dbd2.375d48"
+        ],
+        "x": 555,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9d7e6e8e.72fac",
+        "type": "link out",
+        "z": "da02098a.71f338",
+        "name": "N3 calculated dose",
+        "links": [
+            "d8487d4e.f892",
+            "e9a02ba4.808938"
+        ],
+        "x": 555,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "add78d8a.6e16e",
+        "type": "delay",
+        "z": "2fcdbf94.43f2d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 440,
+        "y": 320,
+        "wires": [
+            [
+                "56d6735f.66598c"
+            ]
+        ]
+    },
+    {
+        "id": "f859fa6d.0ad458",
+        "type": "ui_button",
+        "z": "2fcdbf94.43f2d",
+        "name": "",
+        "group": "b9edc3ba.a7f13",
+        "order": 15,
+        "width": "9",
+        "height": "2",
+        "passthru": false,
+        "label": "dose Nutes",
+        "color": "",
+        "bgcolor": "gold",
+        "icon": "opacity",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "d6304a3d.03b588"
+            ]
+        ]
+    },
+    {
+        "id": "d6304a3d.03b588",
+        "type": "function",
+        "z": "2fcdbf94.43f2d",
+        "name": "",
+        "func": "msg.payload = \"dose\";\nreturn msg;\n\n/*\nmsg2 = \"dose\";\nmsg3 = \"dose\";\n\nreturn [ [msg1],[msg2],[msg3] ];\n*/",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "f32f08e8.30c0f8",
+                "b3a4ea2a.635898",
+                "add78d8a.6e16e"
+            ]
+        ]
+    },
+    {
+        "id": "b3a4ea2a.635898",
+        "type": "delay",
+        "z": "2fcdbf94.43f2d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 440,
+        "y": 280,
+        "wires": [
+            [
+                "b3ec616.44003a"
+            ]
+        ]
+    },
+    {
+        "id": "f8246ef5.45a31",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE N1",
+        "links": [
+            "f32f08e8.30c0f8"
+        ],
+        "x": 35,
+        "y": 160,
+        "wires": [
+            [
+                "21f2c24a.c71a2e"
+            ]
+        ]
+    },
+    {
+        "id": "ed67ec8a.b3401",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "T [AIR]",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "x": 240,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "605b0be6.888984",
+        "type": "ui_gauge",
+        "z": "6f435616.8d0098",
+        "name": "Gauge: pH",
+        "group": "e5023f0d.fc9fc",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "pH",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "11",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#0080ff"
+        ],
+        "seg1": "4",
+        "seg2": "8",
+        "x": 470,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "9f35e239.cc301",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "T [H20]",
+        "topic": "sense/H2O/T",
+        "qos": "2",
+        "broker": "f10466fd.86eac8",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "3a4bade8.f9d052"
+            ]
+        ]
+    },
+    {
+        "id": "3a4bade8.f9d052",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "T [H20]",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "x": 240,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "19933cc6.554d13",
+        "type": "trigger",
+        "z": "6f435616.8d0098",
+        "op1": "",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "60",
+        "extend": true,
+        "units": "min",
+        "reset": "bnee",
+        "name": "If not measured for 1h",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "605b0be6.888984",
+                "b37043e7.fcab1"
+            ]
+        ]
+    },
+    {
+        "id": "9f624d87.467ec",
+        "type": "mqtt out",
+        "z": "8a5b69b.90c6998",
+        "name": "R6",
+        "topic": "NMCU_RELAY/R6",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 670,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "24197459.b56f8c",
+        "type": "mqtt out",
+        "z": "8a5b69b.90c6998",
+        "name": "R7",
+        "topic": "NMCU_RELAY/R7",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 670,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9d41644c.d6bed8",
+        "type": "mqtt out",
+        "z": "8a5b69b.90c6998",
+        "name": "R8",
+        "topic": "NMCU_RELAY/R8",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 670,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "cbe0b469.5c4818",
+        "type": "ui_switch",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "label": "R6 [LED]",
+        "group": "7e7af964.28bb48",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "NMCU_RELAY/R6",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 520,
+        "y": 400,
+        "wires": [
+            [
+                "9f624d87.467ec"
+            ]
+        ]
+    },
+    {
+        "id": "2b240ecf.c3f8f2",
+        "type": "inject",
+        "z": "8a5b69b.90c6998",
+        "name": "RO SYS",
+        "topic": "RO SYS",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "00 19 * * *",
+        "once": false,
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "cc589703.180c98"
+            ]
+        ]
+    },
+    {
+        "id": "cc589703.180c98",
+        "type": "delay",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "hours",
+        "rate": "1",
+        "nbRateUnits": "90",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "1329530e.0733cd"
+            ]
+        ]
+    },
+    {
+        "id": "1329530e.0733cd",
+        "type": "change",
+        "z": "8a5b69b.90c6998",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "db1c5cc2.248fd"
+            ]
+        ]
+    },
+    {
+        "id": "21645ad2.93a9b6",
+        "type": "ui_switch",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "label": "R7 [NP:RO]",
+        "group": "7e7af964.28bb48",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "NMCU_RELAY/R7",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 530,
+        "y": 480,
+        "wires": [
+            [
+                "24197459.b56f8c"
+            ]
+        ]
+    },
+    {
+        "id": "6deb1080.9512c",
+        "type": "ui_switch",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "label": "R8",
+        "group": "7e7af964.28bb48",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "NMCU_RELAY/R8",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 510,
+        "y": 540,
+        "wires": [
+            [
+                "9d41644c.d6bed8"
+            ]
+        ]
+    },
+    {
+        "id": "f32f08e8.30c0f8",
+        "type": "link out",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE N1",
+        "links": [
+            "c310f79d.ab1c18",
+            "f8246ef5.45a31"
+        ],
+        "x": 395,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b3ec616.44003a",
+        "type": "link out",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE N2",
+        "links": [
+            "594f2d16.a85924",
+            "c310f79d.ab1c18"
+        ],
+        "x": 515,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "56d6735f.66598c",
+        "type": "link out",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE N3",
+        "links": [
+            "1d79aee4.2dc5a1",
+            "c310f79d.ab1c18"
+        ],
+        "x": 515,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "594f2d16.a85924",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE N2",
+        "links": [
+            "b3ec616.44003a"
+        ],
+        "x": 275,
+        "y": 160,
+        "wires": [
+            [
+                "e773737a.f7a28"
+            ]
+        ]
+    },
+    {
+        "id": "1d79aee4.2dc5a1",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE N3",
+        "links": [
+            "56d6735f.66598c"
+        ],
+        "x": 515,
+        "y": 160,
+        "wires": [
+            [
+                "a9df6e9a.d9a26"
+            ]
+        ]
+    },
+    {
+        "id": "344aaa51.68b736",
+        "type": "debug",
+        "z": "6f435616.8d0098",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 390,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7acff7cf.b7d298",
+        "type": "inject",
+        "z": "da02098a.71f338",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "x": 110,
+        "y": 100,
+        "wires": [
+            [
+                "c9642208.ae9ff"
+            ]
+        ]
+    },
+    {
+        "id": "ee46185a.a928d8",
+        "type": "inject",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "topic": "LED",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "*/30 19-23 * * *",
+        "once": false,
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "cbe0b469.5c4818"
+            ]
+        ]
+    },
+    {
+        "id": "279c4565.fda94a",
+        "type": "inject",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "topic": "LED",
+        "payload": "off",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "*/30 15-18 * * *",
+        "once": false,
+        "x": 360,
+        "y": 420,
+        "wires": [
+            [
+                "cbe0b469.5c4818"
+            ]
+        ]
+    },
+    {
+        "id": "c373d215.9063c",
+        "type": "inject",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "topic": "LED",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "*/30 0-13 * * *",
+        "once": false,
+        "x": 360,
+        "y": 400,
+        "wires": [
+            [
+                "cbe0b469.5c4818"
+            ]
+        ]
+    },
+    {
+        "id": "27d1cf8f.cb97c",
+        "type": "light-scheduler",
+        "z": "8a5b69b.90c6998",
+        "settings": "e6d32b22.f972c8",
+        "events": "[{\"start\":{\"dow\":1,\"mod\":1140},\"end\":{\"dow\":2,\"mod\":0}},{\"start\":{\"dow\":1,\"mod\":0},\"end\":{\"dow\":1,\"mod\":210}},{\"start\":{\"dow\":2,\"mod\":0},\"end\":{\"dow\":2,\"mod\":210}},{\"start\":{\"dow\":3,\"mod\":0},\"end\":{\"dow\":3,\"mod\":210}},{\"start\":{\"dow\":4,\"mod\":0},\"end\":{\"dow\":4,\"mod\":210}},{\"start\":{\"dow\":5,\"mod\":0},\"end\":{\"dow\":5,\"mod\":210}},{\"start\":{\"dow\":6,\"mod\":0},\"end\":{\"dow\":6,\"mod\":210}},{\"start\":{\"dow\":0,\"mod\":0},\"end\":{\"dow\":0,\"mod\":210}},{\"start\":{\"dow\":2,\"mod\":1140},\"end\":{\"dow\":3,\"mod\":0}},{\"start\":{\"dow\":3,\"mod\":1140},\"end\":{\"dow\":4,\"mod\":0}},{\"start\":{\"dow\":4,\"mod\":1140},\"end\":{\"dow\":5,\"mod\":0}},{\"start\":{\"dow\":5,\"mod\":1140},\"end\":{\"dow\":6,\"mod\":0}},{\"start\":{\"dow\":6,\"mod\":1140},\"end\":{\"dow\":0,\"mod\":0}},{\"start\":{\"dow\":0,\"mod\":1140},\"end\":{\"dow\":1,\"mod\":0}}]",
+        "topic": "NMCU_RELAY/LED",
+        "name": "LIGHT (20 on - 4 off)",
+        "onPayload": "on",
+        "onPayloadType": "str",
+        "offPayload": "off",
+        "offPayloadType": "str",
+        "onlyWhenDark": false,
+        "sunElevationThreshold": 6,
+        "sunShowElevationInStatus": false,
+        "outputfreq": "output.minutely",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13468c2d.979534",
+        "type": "link out",
+        "z": "6f435616.8d0098",
+        "name": "pHd Calculated Dose",
+        "links": [
+            "b82a84d6.31b388",
+            "cb49f824.987018"
+        ],
+        "x": 315,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a857772e.42a738",
+        "type": "mqtt out",
+        "z": "2fcdbf94.43f2d",
+        "name": "NMCU_SMPP/pHu",
+        "topic": "NMCU_SMPP/pHu",
+        "qos": "2",
+        "retain": "",
+        "broker": "f10466fd.86eac8",
+        "x": 170,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "8c5c4387.e870e",
+        "type": "ui_button",
+        "z": "2fcdbf94.43f2d",
+        "name": "",
+        "group": "b83c8b6f.4d1368",
+        "order": 9,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "dose Base",
+        "color": "",
+        "bgcolor": "SkyBlue",
+        "icon": "opacity",
+        "payload": "dose",
+        "payloadType": "str",
+        "topic": "NMCU_SMPP/pHd",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "a857772e.42a738",
+                "f1964696.fd8728"
+            ]
+        ]
+    },
+    {
+        "id": "3ed19436.7693dc",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b83c8b6f.4d1368",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "name": "pH+ dose",
+        "label": "Calc",
+        "format": "{{msg.payload}} mL",
+        "layout": "col-center",
+        "x": 140,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b82a84d6.31b388",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "pH+ Calculated Dose",
+        "links": [
+            "13468c2d.979534"
+        ],
+        "x": 55,
+        "y": 400,
+        "wires": [
+            [
+                "3ed19436.7693dc"
+            ]
+        ]
+    },
+    {
+        "id": "b37043e7.fcab1",
+        "type": "ui_text",
+        "z": "6f435616.8d0098",
+        "group": "b83c8b6f.4d1368",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "pH Level:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 460,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d98ea005.7f6ca",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b83c8b6f.4d1368",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "name": "pHd dose",
+        "label": "Calc",
+        "format": "{{msg.payload}} mL",
+        "layout": "col-center",
+        "x": 380,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "9e16ddf6.474fc",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b9edc3ba.a7f13",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "N1",
+        "label": "",
+        "format": "<font color= MediumOrchid > FloraMicro </font>",
+        "layout": "col-center",
+        "x": 130,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "ad2263cb.270ee",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "N1 Calculated Dose",
+        "links": [
+            "5f3531c2.21512"
+        ],
+        "x": 35,
+        "y": 60,
+        "wires": [
+            [
+                "473a9231.7fc3fc",
+                "21f2c24a.c71a2e"
+            ]
+        ]
+    },
+    {
+        "id": "e52a7efd.d15fe",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b9edc3ba.a7f13",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "name": "N2",
+        "label": "",
+        "format": "<font color= PaleGreen > FloraGro </font>",
+        "layout": "col-center",
+        "x": 370,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "fc2fe463.9d5df8",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b9edc3ba.a7f13",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "name": "N3",
+        "label": "",
+        "format": "<font color= HotPink > FloraBloom </font>",
+        "layout": "col-center",
+        "x": 610,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "1e490cfd.972a33",
+        "type": "inject",
+        "z": "3b2a6f90.9c941",
+        "name": "",
+        "topic": "",
+        "payload": "454",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "fb7e6993.b59208"
+            ]
+        ]
+    },
+    {
+        "id": "fb7e6993.b59208",
+        "type": "change",
+        "z": "3b2a6f90.9c941",
+        "name": "Set colors",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "lime",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "strongcolor",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "1e4d19f7.d5cf56"
+            ]
+        ]
+    },
+    {
+        "id": "1e4d19f7.d5cf56",
+        "type": "ui_text",
+        "z": "3b2a6f90.9c941",
+        "group": "f3766478.27b9a8",
+        "order": 12,
+        "width": "6",
+        "height": "1",
+        "name": "Colored text",
+        "label": "<font color= {{msg.strongcolor}} > Display </font>",
+        "format": "<font color= {{msg.color}} > {{msg.payload}} mL </font>",
+        "layout": "row-spread",
+        "x": 490,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d58bf4b4.2c00c8",
+        "type": "ui_text_input",
+        "z": "2fcdbf94.43f2d",
+        "name": "rec pH+ dose",
+        "label": "<font color= SkyBlue > Acid Dose: </font>",
+        "group": "78cc1bfe.0d3f04",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "1",
+        "topic": "",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23028e84.219ef2",
+        "type": "ui_text_input",
+        "z": "2fcdbf94.43f2d",
+        "name": "rec pHd Dose",
+        "label": "<font color= OrangeRed > Base Dose: </font>",
+        "group": "78cc1bfe.0d3f04",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "1",
+        "topic": "",
+        "x": 400,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e8c3693e.4c9548",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b83c8b6f.4d1368",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "name": "ACID",
+        "label": "",
+        "format": "<font color= OrangeRed > ACID </font>",
+        "layout": "col-center",
+        "x": 370,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d7b93dec.4eac5",
+        "type": "ui_text",
+        "z": "2fcdbf94.43f2d",
+        "group": "b83c8b6f.4d1368",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "BASE",
+        "label": "",
+        "format": "<font color= SkyBlue > BASE </font>",
+        "layout": "col-center",
+        "x": 130,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "cab7e79e.7a4ad8",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "Level [H2O]",
+        "topic": "sense/AIR/CO2",
+        "qos": "2",
+        "broker": "f10466fd.86eac8",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "e57b7ee5.97c08"
+            ]
+        ]
+    },
+    {
+        "id": "e57b7ee5.97c08",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "7742d0bd.4e3f1",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "Water",
+        "format": "100 L",
+        "layout": "row-spread",
+        "x": 230,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "594e17bd.e81ca8",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "CO2 [AIR]",
+        "topic": "sense/AIR/CO2",
+        "qos": "2",
+        "broker": "f10466fd.86eac8",
+        "x": 100,
+        "y": 300,
+        "wires": [
+            [
+                "e76e11.8275a1f"
+            ]
+        ]
+    },
+    {
+        "id": "e76e11.8275a1f",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "7742d0bd.4e3f1",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "name": "CO2 [AIR]",
+        "label": "CO2 [AIR]",
+        "format": "1550 PPM",
+        "layout": "row-spread",
+        "x": 250,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "47e67d30.b85224",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 7,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "EC",
+        "format": "0.44 mS/cm",
+        "layout": "row-spread",
+        "x": 230,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "41438b15.d61604",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "EC [H20]",
+        "topic": "sense/AIR/CO2",
+        "qos": "2",
+        "broker": "f10466fd.86eac8",
+        "x": 100,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf488f2f.19e0d",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global ECgoal",
+        "func": "var msg1 = { payload:msg.payload*10 };\nglobal.set(\"ECgoal\",msg1.payload);\n\n// SMPPduino via I2C \\\\\nvar msg2 = { payload:msg.payload*100+8000 };\nmsg2.payload=\"N\"+msg2.payload;\nreturn msg2;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 620,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cbf462f2.4fd8",
+        "type": "ui_numeric",
+        "z": "a685515c.958ab",
+        "name": "",
+        "label": "Ideal EC",
+        "group": "a4377e8.8778b8",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": "1",
+        "max": "2",
+        "step": "0.1",
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "bf488f2f.19e0d"
+            ]
+        ]
+    },
+    {
+        "id": "c9ef057a.ddb688",
+        "type": "ui_text_input",
+        "z": "a685515c.958ab",
+        "name": "NS",
+        "label": "Nute Strength",
+        "group": "a4377e8.8778b8",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "1",
+        "topic": "",
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "9ca51f3d.e04df",
+                "6e5cc604.0107b8"
+            ]
+        ]
+    },
+    {
+        "id": "9ca51f3d.e04df",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global NS",
+        "func": "global.set(\"NS\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d95b4918.499868",
+        "type": "ui_text_input",
+        "z": "a685515c.958ab",
+        "name": "",
+        "label": "EC Level",
+        "group": "eef1226c.a6eaa",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "1",
+        "topic": "EC/value",
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "fd1e695.4f53098",
+                "edc7f0c9.63f8e"
+            ]
+        ]
+    },
+    {
+        "id": "fd1e695.4f53098",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global EC",
+        "func": "global.set(\"ECLVL\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55112107.e2ba7",
+        "type": "ui_numeric",
+        "z": "a685515c.958ab",
+        "name": "Growth Stage",
+        "label": "Growth Stage",
+        "group": "b9edc3ba.a7f13",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": "1",
+        "max": "12",
+        "step": "1",
+        "x": 440,
+        "y": 340,
+        "wires": [
+            [
+                "287d00e6.5357"
+            ]
+        ]
+    },
+    {
+        "id": "287d00e6.5357",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global GS",
+        "func": "global.set(\"GS\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0f4e71b.40fb98",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global WL",
+        "func": "global.set(\"WL\",msg.payload);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f1fa48f.8d3e68",
+        "type": "ui_text_input",
+        "z": "a685515c.958ab",
+        "name": "",
+        "label": "Water Level",
+        "group": "a4377e8.8778b8",
+        "order": 10,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "1",
+        "topic": "Water/level",
+        "x": 450,
+        "y": 100,
+        "wires": [
+            [
+                "f0f4e71b.40fb98",
+                "e733922c.f9dca"
+            ]
+        ]
+    },
+    {
+        "id": "6e5cc604.0107b8",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 9,
+        "width": "1",
+        "height": "1",
+        "name": "%",
+        "label": "",
+        "format": "%",
+        "layout": "row-spread",
+        "x": 590,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e733922c.f9dca",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 11,
+        "width": "2",
+        "height": "1",
+        "name": "L",
+        "label": "",
+        "format": "L",
+        "layout": "row-left",
+        "x": 590,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "edc7f0c9.63f8e",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "eef1226c.a6eaa",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "name": "mS/cm",
+        "label": "",
+        "format": "mS/cm",
+        "layout": "row-left",
+        "x": 600,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8693b15b.7d202",
+        "type": "delay",
+        "z": "da02098a.71f338",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 450,
+        "y": 80,
+        "wires": [
+            [
+                "23f84146.9a691e"
+            ]
+        ]
+    },
+    {
+        "id": "57316464.63179c",
+        "type": "delay",
+        "z": "da02098a.71f338",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 450,
+        "y": 120,
+        "wires": [
+            [
+                "9d7e6e8e.72fac"
+            ]
+        ]
+    },
+    {
+        "id": "f49cd477.60de48",
+        "type": "exec",
+        "z": "620cacdb.71a004",
+        "command": "sudo shutdown -r now",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "shutdown -r now",
+        "x": 360,
+        "y": 60,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "bab5ada3.7e395",
+        "type": "inject",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "120",
+        "crontab": "",
+        "once": false,
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "4a3b013d.2a1e9",
+                "31f70927.7d9316"
+            ]
+        ]
+    },
+    {
+        "id": "4a3b013d.2a1e9",
+        "type": "delay",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "90",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 280,
+        "y": 100,
+        "wires": [
+            [
+                "75a1dd0a.e871a4"
+            ]
+        ]
+    },
+    {
+        "id": "75a1dd0a.e871a4",
+        "type": "change",
+        "z": "8a5b69b.90c6998",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 100,
+        "wires": [
+            [
+                "31f70927.7d9316"
+            ]
+        ]
+    },
+    {
+        "id": "f52ebfd2.4f013",
+        "type": "delay",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "90",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "cf94b1eb.3ccdd"
+            ]
+        ]
+    },
+    {
+        "id": "cf94b1eb.3ccdd",
+        "type": "change",
+        "z": "8a5b69b.90c6998",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 500,
+        "wires": [
+            [
+                "21645ad2.93a9b6"
+            ]
+        ]
+    },
+    {
+        "id": "f03b30a6.b1a08",
+        "type": "ui_button",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "group": "684160e7.d25ce",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "NP: +5L RO",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "f52ebfd2.4f013",
+                "21645ad2.93a9b6"
+            ]
+        ]
+    },
+    {
+        "id": "883a52f6.8b9cb",
+        "type": "delay",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "90",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 280,
+        "y": 40,
+        "wires": [
+            [
+                "d7e4d66b.be5e28"
+            ]
+        ]
+    },
+    {
+        "id": "d7e4d66b.be5e28",
+        "type": "change",
+        "z": "8a5b69b.90c6998",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 40,
+        "wires": [
+            [
+                "2cc901a3.0a70fe"
+            ]
+        ]
+    },
+    {
+        "id": "7cffea46.c58214",
+        "type": "ui_button",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "group": "684160e7.d25ce",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "NR: +5L",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "",
+        "x": 140,
+        "y": 20,
+        "wires": [
+            [
+                "883a52f6.8b9cb",
+                "2cc901a3.0a70fe"
+            ]
+        ]
+    },
+    {
+        "id": "c2e84c32.bb439",
+        "type": "change",
+        "z": "8a5b69b.90c6998",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "b90b9609.5ad758"
+            ]
+        ]
+    },
+    {
+        "id": "34017eca.431e02",
+        "type": "delay",
+        "z": "8a5b69b.90c6998",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "c2e84c32.bb439"
+            ]
+        ]
+    },
+    {
+        "id": "c310f79d.ab1c18",
+        "type": "link in",
+        "z": "8a5b69b.90c6998",
+        "name": "DOSE ANYTHING",
+        "links": [
+            "56d6735f.66598c",
+            "b3ec616.44003a",
+            "b94a5552.c0b8d8",
+            "f1964696.fd8728",
+            "f32f08e8.30c0f8"
+        ],
+        "x": 175,
+        "y": 300,
+        "wires": [
+            [
+                "34017eca.431e02",
+                "85d3fb5f.adebb8"
+            ]
+        ]
+    },
+    {
+        "id": "f1964696.fd8728",
+        "type": "link out",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE BASE",
+        "links": [
+            "c310f79d.ab1c18"
+        ],
+        "x": 275,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b94a5552.c0b8d8",
+        "type": "link out",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE ACID",
+        "links": [
+            "c310f79d.ab1c18"
+        ],
+        "x": 495,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "85d3fb5f.adebb8",
+        "type": "change",
+        "z": "8a5b69b.90c6998",
+        "name": "on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "b90b9609.5ad758"
+            ]
+        ]
+    }
+]
