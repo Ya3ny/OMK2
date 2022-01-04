@@ -1,0 +1,7104 @@
+[
+    {
+        "id": "da02098a.71f338",
+        "type": "tab",
+        "label": "RECIPE",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f5351739.b93f78",
+        "type": "tab",
+        "label": "RELAY",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a685515c.958ab",
+        "type": "tab",
+        "label": "SENSE",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1c8adb39.c01d05",
+        "type": "tab",
+        "label": "1P6R",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "30bf53e1.84dcdc",
+        "type": "tab",
+        "label": "Greenhouse",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "538fb6a8f2e20611",
+        "type": "tab",
+        "label": "Settings",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2fcdbf94.43f2d",
+        "type": "tab",
+        "label": "SMPP",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "620cacdb.71a004",
+        "type": "tab",
+        "label": "RPi",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6f435616.8d0098",
+        "type": "tab",
+        "label": "pH",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "3b2a6f90.9c941",
+        "type": "subflow",
+        "name": "Change Text Color based on State",
+        "info": "This sample could be used to notify user if nutes/\nacid/base was dosed recently",
+        "in": [],
+        "out": []
+    },
+    {
+        "id": "f5ea5717c02892c1",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#4c00ff",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#ffa200",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#4B7930",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#6db046",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#4b7930",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "OMK2",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6cc21cda88c031a5",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9ef04463.7a7778",
+        "type": "ui_tab",
+        "name": "Control Panel",
+        "icon": "warning",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a4377e8.8778b8",
+        "type": "ui_group",
+        "name": "VARIABLES",
+        "tab": "9ef04463.7a7778",
+        "order": 2,
+        "disp": false,
+        "width": "4"
+    },
+    {
+        "id": "f10466fd.86eac8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b9b4d80f.9a9a28",
+        "type": "ui_tab",
+        "name": "RPi",
+        "icon": "wi-moon-third-quart\t",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "db6e0761.6988e8",
+        "type": "ui_group",
+        "name": "System",
+        "tab": "b9b4d80f.9a9a28",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "7e7af964.28bb48",
+        "type": "ui_group",
+        "name": "NMCU_R1",
+        "tab": "9ef04463.7a7778",
+        "order": 3,
+        "disp": false,
+        "width": "4"
+    },
+    {
+        "id": "e5023f0d.fc9fc",
+        "type": "ui_group",
+        "name": "NMCU_SENSE",
+        "tab": "e989032d.313d8",
+        "order": 5,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "b83c8b6f.4d1368",
+        "type": "ui_group",
+        "name": "pH",
+        "tab": "9ef04463.7a7778",
+        "order": 7,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "f3766478.27b9a8",
+        "type": "ui_group",
+        "name": "S1",
+        "tab": "a1a90124.f703",
+        "order": 1,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "a1a90124.f703",
+        "type": "ui_tab",
+        "d": true,
+        "name": "bnee",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "78cc1bfe.0d3f04",
+        "type": "ui_group",
+        "name": "Group 4",
+        "tab": "a1a90124.f703",
+        "order": 4,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "e989032d.313d8",
+        "type": "ui_tab",
+        "name": "Greenhouse",
+        "icon": "account_balance",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4058e819.b1b4c8",
+        "type": "ui_group",
+        "name": "AIR",
+        "tab": "e989032d.313d8",
+        "order": 1,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1169b795.d4ac78",
+        "type": "ui_group",
+        "name": "Soil Moisture",
+        "tab": "e989032d.313d8",
+        "order": 2,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "41057037.261d2",
+        "type": "ui_group",
+        "name": "WR1",
+        "tab": "e989032d.313d8",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "61b16c10.a18be4",
+        "type": "ui_group",
+        "name": "Organic Recipe",
+        "tab": "9ef04463.7a7778",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "495fa615.6df518",
+        "type": "ui_group",
+        "name": "SMPP",
+        "tab": "9ef04463.7a7778",
+        "order": 6,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5cfc3e25.b8cb1",
+        "type": "ui_group",
+        "name": "COMPOST",
+        "tab": "e989032d.313d8",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "69a05d8b.e97e44",
+        "type": "ui_group",
+        "name": "NMCU_R2",
+        "tab": "9ef04463.7a7778",
+        "order": 4,
+        "disp": false,
+        "width": "4"
+    },
+    {
+        "id": "88a60a4b.348278",
+        "type": "ui_group",
+        "name": "Soil Moisture",
+        "tab": "9ef04463.7a7778",
+        "order": 5,
+        "disp": false,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "986f56f68e414ed6",
+        "type": "mqtt-broker",
+        "name": "broker_LPT",
+        "broker": "192.168.0.107",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fa3abb0c0f4da80f",
+        "type": "ui_tab",
+        "name": "Settings",
+        "icon": "settings",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6c9526c0d783228f",
+        "type": "ui_group",
+        "name": "SM1",
+        "tab": "fa3abb0c0f4da80f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "14be319d8fc49a2b",
+        "type": "ui_group",
+        "name": "SM2",
+        "tab": "fa3abb0c0f4da80f",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "117901e728d3ec2a",
+        "type": "ui_group",
+        "name": "SM3",
+        "tab": "fa3abb0c0f4da80f",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "689abfa1b4e28ba8",
+        "type": "ui_group",
+        "name": "CP1_M",
+        "tab": "fa3abb0c0f4da80f",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "1e490cfd.972a33",
+        "type": "inject",
+        "z": "3b2a6f90.9c941",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "topic": "",
+        "payload": "454",
+        "payloadType": "num",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "fb7e6993.b59208"
+            ]
+        ]
+    },
+    {
+        "id": "fb7e6993.b59208",
+        "type": "change",
+        "z": "3b2a6f90.9c941",
+        "name": "Set colors",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "lime",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "strongcolor",
+                "pt": "msg",
+                "to": "red",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "1e4d19f7.d5cf56"
+            ]
+        ]
+    },
+    {
+        "id": "1e4d19f7.d5cf56",
+        "type": "ui_text",
+        "z": "3b2a6f90.9c941",
+        "group": "f3766478.27b9a8",
+        "order": 12,
+        "width": "6",
+        "height": "1",
+        "name": "Colored text",
+        "label": "<font color= {{msg.strongcolor}} > Display </font>",
+        "format": "<font color= {{msg.color}} > {{msg.payload}} mL </font>",
+        "layout": "row-spread",
+        "x": 490,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7a1622e8.1ed91c",
+        "type": "ui_text",
+        "z": "da02098a.71f338",
+        "group": "61b16c10.a18be4",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "GS Name",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 720,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f7edd0e4.9b3bd",
+        "type": "function",
+        "z": "da02098a.71f338",
+        "name": "Orga Nute Recipe",
+        "func": "/*  Nute Dose - Update  */\n\nvar ECLVL  = global.get(\"ECLVL\");\nvar ECgoal = global.get(\"ECgoal\");\nvar GS     = global.get(\"GSO\");\nvar tba1_TTON = global.get(\"tba1_TTON\");\nvar tba1_TTON_r = tba1_TTON.payload;\n\nvar ECf = 1; /* (ECgoal-ECLVL)/ECgoal; */ //dose factor\n\nvar NT; // nute total dose\n\nvar mlss={};        //Molasses\nvar vdjc={};        //Voodoo Juice\nvar swp={};         //Seaweed Powder\nvar mycr={};        //Mycorrhizae\nvar CaMg={};        //CaliMagic\nvar cpst={};        //Compost\nvar ewc={};         //Earthworm Castings\nvar msg15={};       //GS\n\nvar msg5 = { payload:\"EC: \"+ECLVL };\nvar msg6 = { payload:\"EC goal: \"+ECgoal };\nvar msg7 = { payload:\"GS: \"+GS };\nvar msg9 = { payload:\"ECf: \"+ECf };\n\nvar msg14={};\n\nif (GS==\"1\"){\n  mlss.payload=(tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=(tba1_TTON_r*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=tba1_TTON_r;\n  cpst.payload=(tba1_TTON_r*2).toFixed(1);\n  ewc.payload=parseFloat(tba1_TTON_r);\n  \n  msg15.payload=\"Seedling\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"2\"){\n  mlss.payload=(0*tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=((tba1_TTON_r)*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=(0*tba1_TTON_r).toFixed(1);\n  cpst.payload=(0*tba1_TTON_r*2).toFixed(1);\n  ewc.payload=(0*(tba1_TTON_r)).toFixed(1);\n  \n  msg15.payload=\"Vegetative 1\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"3\"){\n  mlss.payload=(tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=(0*(tba1_TTON_r)*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(0*tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=(0*tba1_TTON_r).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1);\n  ewc.payload=(tba1_TTON_r*2).toFixed(1);\n\n  msg15.payload=\"Vegetative 2\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"4\"){\n  mlss.payload=(tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=(0*tba1_TTON_r*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=(0*tba1_TTON_r).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1);\n  ewc.payload=tba1_TTON_r;\n\n  msg15.payload=\"Early bloom [1]\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"5\"){\n  mlss.payload=(tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=(0*tba1_TTON_r*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(0*tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=(0*tba1_TTON_r).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1)*0;\n  ewc.payload=tba1_TTON_r*0;\n\n  msg15.payload=\"Early bloom [2]\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"7\"){\n  mlss.payload=(tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=(0*tba1_TTON_r*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(0*tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=(0*tba1_TTON_r).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1)*0;\n  ewc.payload=tba1_TTON_r*0;\n\n  msg15.payload=\"Mid bloom [1]\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"8\"){\n  mlss.payload=(tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=(0*tba1_TTON_r*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(0*tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=(0*tba1_TTON_r).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1)*0;\n  ewc.payload=tba1_TTON_r*0;\n\n  msg15.payload=\"Mid bloom [2]\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"9\"){\n  mlss.payload=(tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=(0*tba1_TTON_r*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(0*tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=(0*tba1_TTON_r).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1)*0;\n  ewc.payload=tba1_TTON_r*0;\n\n  msg15.payload=\"Mid bloom [3]\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"10\"){\n  mlss.payload=(tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=(0*tba1_TTON_r*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(0*tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=(0*tba1_TTON_r).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1)*0;\n  ewc.payload=tba1_TTON_r*0;\n\n  msg15.payload=\"Late bloom\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"11\"){\n  mlss.payload=(tba1_TTON_r*3).toFixed(1);\n  vdjc.payload=(0*tba1_TTON_r*3).toFixed(1);\n  swp.payload=(tba1_TTON_r*2).toFixed(1);\n  mycr.payload=(0*tba1_TTON_r*150/50).toFixed(0);\n  CaMg.payload=(0*tba1_TTON_r).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1)*0;\n  ewc.payload=tba1_TTON_r*0;\n\n  msg15.payload=\"Ripen\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"12\"){\n  mlss.payload=((tba1_TTON_r*3)*0).toFixed(1);\n  vdjc.payload=((tba1_TTON_r*3)*0).toFixed(1);\n  swp.payload=((tba1_TTON_r*3)*0).toFixed(1);\n  mycr.payload=((tba1_TTON_r*150/50)*0).toFixed(1);\n  CaMg.payload=((tba1_TTON_r*74)*0).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1)*0;\n  ewc.payload=tba1_TTON_r*0;\n  \n  msg15.payload=\"Flush\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}\nelse if (GS==\"13\"){\n  mlss.payload=((tba1_TTON_r*3)*0).toFixed(1);\n  vdjc.payload=((tba1_TTON_r*3)*0).toFixed(1);\n  swp.payload=((tba1_TTON_r*3)*0).toFixed(1);\n  mycr.payload=((tba1_TTON_r*150/50)*0).toFixed(1);\n  CaMg.payload=((tba1_TTON_r*74)*0).toFixed(1);\n  cpst.payload=(tba1_TTON_r*2).toFixed(1)*0;\n  ewc.payload=tba1_TTON_r*0;\n  \n  msg15.payload=\"Harvest!\";\n  return [ [mlss],[vdjc],[swp],[mycr],[CaMg],[cpst],[ewc],[msg15] ];\n}",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "f66c810.cbb238",
+                "cd114c59.bc6af"
+            ],
+            [
+                "ab5960ad.5cdcd"
+            ],
+            [
+                "62870b87.a45e34",
+                "a0ffe2ed.65d9b"
+            ],
+            [
+                "ffc03a3e.231f28"
+            ],
+            [],
+            [
+                "b5e90252.54564"
+            ],
+            [
+                "767fe939.b25278"
+            ],
+            [
+                "7a1622e8.1ed91c"
+            ]
+        ],
+        "outputLabels": [
+            "Molasses",
+            "Voodoo Juice",
+            "Seaweed Extract",
+            "Mycorrhizae",
+            "Cal Mag",
+            "Compost",
+            "Earthworm Castings",
+            "Growth Stage"
+        ]
+    },
+    {
+        "id": "f66c810.cbb238",
+        "type": "ui_text",
+        "z": "da02098a.71f338",
+        "group": "61b16c10.a18be4",
+        "order": 7,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Molasses",
+        "format": "<font color= brown > {{msg.payload}} mL </font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 720,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ffc03a3e.231f28",
+        "type": "ui_text",
+        "z": "da02098a.71f338",
+        "group": "61b16c10.a18be4",
+        "order": 10,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Mycorrhizae",
+        "format": "<font color= tan > {{msg.payload}} g </font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 730,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ab5960ad.5cdcd",
+        "type": "ui_text",
+        "z": "da02098a.71f338",
+        "group": "61b16c10.a18be4",
+        "order": 8,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Voodoo Juice",
+        "format": "<font color= purple > {{msg.payload}} mL </font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 740,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "62870b87.a45e34",
+        "type": "ui_text",
+        "z": "da02098a.71f338",
+        "group": "61b16c10.a18be4",
+        "order": 9,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Seaweed Extract",
+        "format": "<font color= green > {{msg.payload}} mL </font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 750,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "767fe939.b25278",
+        "type": "ui_text",
+        "z": "da02098a.71f338",
+        "group": "61b16c10.a18be4",
+        "order": 13,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Earthworm Castings",
+        "format": "<font color= orange > {{msg.payload}} cup(s) </font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 760,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b5e90252.54564",
+        "type": "ui_text",
+        "z": "da02098a.71f338",
+        "group": "61b16c10.a18be4",
+        "order": 12,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Compost",
+        "format": "<font color= tan > {{msg.payload}} cup(s) </font>",
+        "layout": "col-center",
+        "className": "",
+        "x": 720,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "a0ffe2ed.65d9b",
+        "type": "link out",
+        "z": "da02098a.71f338",
+        "name": "N4 dose",
+        "mode": "link",
+        "links": [
+            "c02273e6.c5f8b"
+        ],
+        "x": 675,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "cd114c59.bc6af",
+        "type": "link out",
+        "z": "da02098a.71f338",
+        "name": "N1 calculated dose",
+        "links": [
+            "ad2263cb.270ee",
+            "d673df92.6909d",
+            "a53ccbfd.4aee38"
+        ],
+        "x": 655,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "64536b8c.0c9424",
+        "type": "ui_button",
+        "z": "da02098a.71f338",
+        "name": "",
+        "group": "61b16c10.a18be4",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Based on water to be added",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "on water to be added",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "cb88f7af.858c08",
+                "59682d24.8c3a14",
+                "20ad868.672427a"
+            ]
+        ]
+    },
+    {
+        "id": "cb88f7af.858c08",
+        "type": "link out",
+        "z": "da02098a.71f338",
+        "name": "Update based on water to be added",
+        "mode": "link",
+        "links": [
+            "24cdd7a5.590928"
+        ],
+        "x": 335,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "59682d24.8c3a14",
+        "type": "delay",
+        "z": "da02098a.71f338",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "f7edd0e4.9b3bd"
+            ]
+        ]
+    },
+    {
+        "id": "224fcfe4.b42d2",
+        "type": "inject",
+        "z": "da02098a.71f338",
+        "name": "",
+        "repeat": "",
+        "crontab": "0 6-23 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "cb88f7af.858c08",
+                "59682d24.8c3a14"
+            ]
+        ]
+    },
+    {
+        "id": "3ca983f1.6bd94c",
+        "type": "link in",
+        "z": "da02098a.71f338",
+        "name": "Update recipe",
+        "links": [
+            "f92aefc3c8f78c25"
+        ],
+        "x": 335,
+        "y": 60,
+        "wires": [
+            [
+                "f7edd0e4.9b3bd"
+            ]
+        ]
+    },
+    {
+        "id": "f0a22f6b.029de",
+        "type": "ui_numeric",
+        "z": "da02098a.71f338",
+        "name": "Growth Stage (organic)",
+        "label": "Growth Stage",
+        "tooltip": "",
+        "group": "61b16c10.a18be4",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "wrap": true,
+        "passthru": true,
+        "topic": "",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": "1",
+        "max": "13",
+        "step": "1",
+        "className": "",
+        "x": 150,
+        "y": 20,
+        "wires": [
+            [
+                "e90aa7d6.9644c8",
+                "f7edd0e4.9b3bd"
+            ]
+        ]
+    },
+    {
+        "id": "e90aa7d6.9644c8",
+        "type": "function",
+        "z": "da02098a.71f338",
+        "name": "Global GSO",
+        "func": "global.set(\"GSO\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20ad868.672427a",
+        "type": "ui_text",
+        "z": "da02098a.71f338",
+        "group": "61b16c10.a18be4",
+        "order": 6,
+        "width": "12",
+        "height": "1",
+        "name": "Dose for...",
+        "label": "",
+        "format": "Doses for {{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 450,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "0b81cdc98dfdfa3a",
+        "type": "aedes broker",
+        "z": "da02098a.71f338",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "de2bb9284e7790e1",
+        "type": "ui_button",
+        "z": "da02098a.71f338",
+        "name": "",
+        "group": "61b16c10.a18be4",
+        "order": 5,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Dose Per 1L",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "1L",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 70,
+        "y": 120,
+        "wires": [
+            [
+                "20ad868.672427a",
+                "de0f477e.fe0b78"
+            ]
+        ]
+    },
+    {
+        "id": "de0f477e.fe0b78",
+        "type": "function",
+        "z": "da02098a.71f338",
+        "name": "",
+        "func": "var L = msg.payload;\n\nvar tba1 = {}\n\nvar WR1_L_max = {}\n\nWR1_L_max.payload = \"23.1\";\n\nglobal.set(\"WR1_L_max\",WR1_L_max);\n\nif (L==\"1L\"){\n  tba1.payload = \"1\";\n  global.set(\"tba1_TTON\", tba1);\n  return msg\n}\n\nif (L==\"WR1_L_max\"){\n  tba1.payload = WR1_L_max.payload;\n  global.set(\"tba1_TTON\", WR1_L_max);\n  return msg\n}\n\n\n/* // working\nvar tba1 = {}\n\ntba1.payload = \"1\";\n\nglobal.set(\"tba1_TTON\", tba1);\n\nif (msg==\"1\"){\n  tba1.payload = \"1\";\n  return tba1.payload\n}\n*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 140,
+        "wires": [
+            [
+                "f7edd0e4.9b3bd"
+            ]
+        ]
+    },
+    {
+        "id": "a624b2d601d0a8b5",
+        "type": "ui_button",
+        "z": "da02098a.71f338",
+        "name": "",
+        "group": "61b16c10.a18be4",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "New WR1_L",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "teal",
+        "className": "",
+        "icon": "",
+        "payload": "WR1_L_max",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 70,
+        "y": 80,
+        "wires": [
+            [
+                "de0f477e.fe0b78",
+                "20ad868.672427a"
+            ]
+        ]
+    },
+    {
+        "id": "94010427c5b286f9",
+        "type": "comment",
+        "z": "da02098a.71f338",
+        "name": "WR1_L_max",
+        "info": "",
+        "x": 210,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b53538ab.9eb648",
+        "type": "ui_switch",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "label": "SMPP",
+        "group": "7e7af964.28bb48",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "c884d6d8.9d4948"
+            ]
+        ]
+    },
+    {
+        "id": "8aa8a10f.157fe",
+        "type": "ui_switch",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "label": "RO SYS",
+        "group": "7e7af964.28bb48",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 600,
+        "y": 120,
+        "wires": [
+            [
+                "eb4c812c.da316"
+            ]
+        ]
+    },
+    {
+        "id": "f5cf7d10.6cb79",
+        "type": "ui_switch",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "label": "WR1_T+",
+        "group": "7e7af964.28bb48",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 600,
+        "y": 200,
+        "wires": [
+            [
+                "8c976503.433728"
+            ]
+        ]
+    },
+    {
+        "id": "4ddf9f97.0957d",
+        "type": "inject",
+        "z": "f5351739.b93f78",
+        "name": "That time of night",
+        "repeat": "",
+        "crontab": "00 01 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "85d22eb7.bd9e",
+                "a3e472d8.2f6b3",
+                "f92aefc3c8f78c25"
+            ]
+        ]
+    },
+    {
+        "id": "85d22eb7.bd9e",
+        "type": "function",
+        "z": "f5351739.b93f78",
+        "name": "tba1_TTON",
+        "func": "var tba1 = global.get(\"tba1\");\n\nglobal.set(\"tba1_TTON\", tba1);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3e472d8.2f6b3",
+        "type": "delay",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 120,
+        "wires": [
+            [
+                "eaa811fd.6329",
+                "8aa8a10f.157fe"
+            ]
+        ]
+    },
+    {
+        "id": "3817b970.9d74f6",
+        "type": "change",
+        "z": "f5351739.b93f78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "8aa8a10f.157fe"
+            ]
+        ]
+    },
+    {
+        "id": "eaa811fd.6329",
+        "type": "delay",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "hours",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "3817b970.9d74f6",
+                "5ec0b45d.c3c39c"
+            ]
+        ]
+    },
+    {
+        "id": "5ec0b45d.c3c39c",
+        "type": "change",
+        "z": "f5351739.b93f78",
+        "name": "on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "d6e6115c.e6266",
+                "f5cf7d10.6cb79"
+            ]
+        ]
+    },
+    {
+        "id": "d6e6115c.e6266",
+        "type": "delay",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "hours",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "f9c0be12.c3cff",
+                "31c7022.74202fe",
+                "6d148edd.fcb84"
+            ]
+        ]
+    },
+    {
+        "id": "f9c0be12.c3cff",
+        "type": "change",
+        "z": "f5351739.b93f78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "f5cf7d10.6cb79"
+            ]
+        ]
+    },
+    {
+        "id": "31c7022.74202fe",
+        "type": "change",
+        "z": "f5351739.b93f78",
+        "name": "on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "b53538ab.9eb648"
+            ]
+        ]
+    },
+    {
+        "id": "36556f5c.e60e5",
+        "type": "change",
+        "z": "f5351739.b93f78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "b53538ab.9eb648"
+            ]
+        ]
+    },
+    {
+        "id": "54e0d09.126583",
+        "type": "comment",
+        "z": "f5351739.b93f78",
+        "name": "dose SWP",
+        "info": "",
+        "x": 620,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "6ee646c.e350fb8",
+        "type": "comment",
+        "z": "f5351739.b93f78",
+        "name": "dose molasses",
+        "info": "",
+        "x": 640,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "6d148edd.fcb84",
+        "type": "delay",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "4b153be7.6cff64",
+                "64da6df5.c11a44"
+            ]
+        ]
+    },
+    {
+        "id": "d55de37d.791a7",
+        "type": "link out",
+        "z": "f5351739.b93f78",
+        "name": "dose N4",
+        "links": [
+            "8f37a959.3df648"
+        ],
+        "x": 555,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4b153be7.6cff64",
+        "type": "change",
+        "z": "f5351739.b93f78",
+        "name": "dose",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "dose",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 320,
+        "wires": [
+            [
+                "d55de37d.791a7"
+            ]
+        ]
+    },
+    {
+        "id": "64da6df5.c11a44",
+        "type": "delay",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "hours",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "a0efc71e.a01e18",
+                "57263098.ee5b7"
+            ]
+        ]
+    },
+    {
+        "id": "a0efc71e.a01e18",
+        "type": "change",
+        "z": "f5351739.b93f78",
+        "name": "dose",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "dose",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "bbeb3b00.01f908"
+            ]
+        ]
+    },
+    {
+        "id": "bbeb3b00.01f908",
+        "type": "link out",
+        "z": "f5351739.b93f78",
+        "name": "dose N1",
+        "links": [
+            "fddce7ad.f93ff8"
+        ],
+        "x": 555,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "57263098.ee5b7",
+        "type": "delay",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 400,
+        "wires": [
+            [
+                "36556f5c.e60e5"
+            ]
+        ]
+    },
+    {
+        "id": "1d056037.fee72",
+        "type": "link in",
+        "z": "f5351739.b93f78",
+        "name": "WR1_H",
+        "links": [
+            "e12aab99.0276d8"
+        ],
+        "x": 495,
+        "y": 180,
+        "wires": [
+            [
+                "f5cf7d10.6cb79"
+            ]
+        ]
+    },
+    {
+        "id": "53825689.761418",
+        "type": "ui_switch",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "label": "WR1 Aerator",
+        "group": "7e7af964.28bb48",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 590,
+        "y": 20,
+        "wires": [
+            [
+                "1c4f7e2a.1b0062"
+            ]
+        ]
+    },
+    {
+        "id": "df2010e6.6d7eb",
+        "type": "inject",
+        "z": "f5351739.b93f78",
+        "name": "on",
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 90,
+        "y": 20,
+        "wires": [
+            [
+                "53825689.761418"
+            ]
+        ]
+    },
+    {
+        "id": "24cdd7a5.590928",
+        "type": "link in",
+        "z": "f5351739.b93f78",
+        "name": "Update based on water to be added",
+        "links": [
+            "cb88f7af.858c08",
+            "b062037d.54e58",
+            "c51bc3b9.a1741"
+        ],
+        "x": 335,
+        "y": 60,
+        "wires": [
+            [
+                "85d22eb7.bd9e"
+            ]
+        ]
+    },
+    {
+        "id": "279e16c2.38e15a",
+        "type": "inject",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "repeat": "43200",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "8aa8a10f.157fe",
+                "eaa811fd.6329"
+            ]
+        ]
+    },
+    {
+        "id": "1bf48f51.1b9a71",
+        "type": "inject",
+        "z": "f5351739.b93f78",
+        "name": "off",
+        "repeat": "",
+        "crontab": "01 06 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 230,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c4f7e2a.1b0062",
+        "type": "mqtt out",
+        "z": "f5351739.b93f78",
+        "name": "O2[C7]",
+        "topic": "NMCU_R1/C7",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 760,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "eb4c812c.da316",
+        "type": "mqtt out",
+        "z": "f5351739.b93f78",
+        "name": "O1[C8]",
+        "topic": "NMCU_R1/C8",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 760,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c884d6d8.9d4948",
+        "type": "mqtt out",
+        "z": "f5351739.b93f78",
+        "name": "O4[C5]",
+        "topic": "NMCU_R1/C5",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 760,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e62b2297.7d3fa",
+        "type": "mqtt out",
+        "z": "f5351739.b93f78",
+        "name": "O7[C2]",
+        "topic": "NMCU_R1/C2",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 80,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8c976503.433728",
+        "type": "mqtt out",
+        "z": "f5351739.b93f78",
+        "name": "O3[C6]",
+        "topic": "NMCU_R1/C6",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 760,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "3a810849.6ad698",
+        "type": "mqtt out",
+        "z": "f5351739.b93f78",
+        "name": "O8[C1]",
+        "topic": "NMCU_R1/C1",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 760,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "356f6271.2bc28e",
+        "type": "ui_switch",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "label": "AIR Circ",
+        "group": "7e7af964.28bb48",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "3a810849.6ad698"
+            ]
+        ]
+    },
+    {
+        "id": "719d6ee1.f57f2",
+        "type": "mqtt out",
+        "z": "f5351739.b93f78",
+        "name": "O6[C3]",
+        "topic": "NMCU_R1/C3",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 760,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "f939e1ab.645c9",
+        "type": "link in",
+        "z": "f5351739.b93f78",
+        "name": "SMPP",
+        "links": [
+            "74521f80.817ed",
+            "956b09cb.106368",
+            "62da1ce2.3de914"
+        ],
+        "x": 495,
+        "y": 260,
+        "wires": [
+            [
+                "b53538ab.9eb648"
+            ]
+        ]
+    },
+    {
+        "id": "dd61aa3a.53e1f8",
+        "type": "change",
+        "z": "f5351739.b93f78",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 480,
+        "wires": [
+            [
+                "3b81d27a.9419be",
+                "ed682234.45ca9"
+            ]
+        ]
+    },
+    {
+        "id": "3b81d27a.9419be",
+        "type": "ui_switch",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "label": "Irrigate",
+        "tooltip": "",
+        "group": "7e7af964.28bb48",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "b4b78691.e29218"
+            ]
+        ]
+    },
+    {
+        "id": "b4b78691.e29218",
+        "type": "mqtt out",
+        "z": "f5351739.b93f78",
+        "name": "O5[C4]",
+        "topic": "NMCU_R1/C4",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 760,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "51cf183c.393c88",
+        "type": "link in",
+        "z": "f5351739.b93f78",
+        "name": "IRRIGATE",
+        "links": [
+            "fcb06220.07f94"
+        ],
+        "x": 155,
+        "y": 460,
+        "wires": [
+            [
+                "3b81d27a.9419be",
+                "9dd76946beff0776"
+            ]
+        ]
+    },
+    {
+        "id": "ed682234.45ca9",
+        "type": "link out",
+        "z": "f5351739.b93f78",
+        "name": "Irrigate off",
+        "mode": "link",
+        "links": [
+            "82d7a46d.dcf0f8"
+        ],
+        "x": 515,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "9dd76946beff0776",
+        "type": "delay",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 280,
+        "y": 480,
+        "wires": [
+            [
+                "dd61aa3a.53e1f8"
+            ]
+        ]
+    },
+    {
+        "id": "f92aefc3c8f78c25",
+        "type": "link out",
+        "z": "f5351739.b93f78",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "3ca983f1.6bd94c"
+        ],
+        "x": 335,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "173d1a6f.a78646",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "T [AIR]",
+        "topic": "sense/GH/T",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 70,
+        "y": 260,
+        "wires": [
+            [
+                "69e56224.213a5c",
+                "54db5df0.549c44",
+                "4898a951.664b28"
+            ]
+        ]
+    },
+    {
+        "id": "dedcf624.7091f8",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "Humidity [AIR]",
+        "topic": "sense/GH/H",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "c9fd7fa3.0a7c",
+                "1ce77316.98e0ed",
+                "aa48b8c6.055848"
+            ]
+        ]
+    },
+    {
+        "id": "c9fd7fa3.0a7c",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "[AIR] H",
+        "format": "{{msg.payload}} %",
+        "layout": "row-spread",
+        "x": 320,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "594e17bd.e81ca8",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "CO2 [AIR]",
+        "topic": "sense/GH/CO2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 80,
+        "y": 420,
+        "wires": [
+            [
+                "e76e11.8275a1f",
+                "8736861c.e66578",
+                "1169dddb.bbc6d2"
+            ]
+        ]
+    },
+    {
+        "id": "e76e11.8275a1f",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "[AIR] CO2",
+        "format": "{{msg.payload}} PPM",
+        "layout": "row-spread",
+        "x": 330,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "69e56224.213a5c",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "[AIR] T",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "x": 310,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "54db5df0.549c44",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "GH temp",
+        "links": [
+            "a2140319.8439f"
+        ],
+        "x": 275,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1ce77316.98e0ed",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "GH hum",
+        "links": [
+            "d84b2850.874bd8"
+        ],
+        "x": 275,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8736861c.e66578",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "GH CO2",
+        "links": [
+            "1062d91c.db19e7"
+        ],
+        "x": 275,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f1c7a709.1deb88",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "",
+        "topic": "sense/GH/WR1_L",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "3a47458b.de1bea",
+                "44335fb1.193d4"
+            ]
+        ]
+    },
+    {
+        "id": "e0cacfd.fb6573",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 5,
+        "width": "4",
+        "height": "1",
+        "name": "WR1_L",
+        "label": "WR1_L",
+        "format": "{{msg.payload}} L",
+        "layout": "row-spread",
+        "x": 460,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "3a47458b.de1bea",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "process",
+        "func": "var h = parseFloat(msg.payload)-10;\nvar WR1_L = {}\n\nvar h_empty = 470;\nvar h_full = 380;\n\nvar vol = (3.14*Math.pow(14,2)*h_full/10000);\nvar percent = (Math.abs(h-h_full)/h_full);\nvar tba1 = {}\nvar RO_SYS = {}\nvar WR1_L_max = {}\n\nWR1_L_max.payload = global.get(\"WR1_L_max\");\n\n\nif (h <= h_empty ) {\n  WR1_L.payload = (vol*percent).toFixed(1);\n  tba1.payload = (WR1_L_max-(WR1_L.payload)).toFixed(1);\n  /*\n  if (WR1_L => WR1_L_max) {\n    RO_SYS.payload=\"0\";\n  }\n  */\n  global.set(\"tba1\",tba1);\n  global.set(\"WR1_L\",WR1_L);\n  return [ [WR1_L] , [tba1], [RO_SYS] ];\n}\n\nif (h > h_empty ) {\n  WR1_L.payload = \"Return sensor to original position\";\n  RO_SYS.payload = \"0\";\n  tba1.payload = \"nill\";\n  global.set(\"tba1\",tba1);\n  return [ [WR1_L], [tba1], [RO_SYS] ];\n}",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "e0cacfd.fb6573",
+                "340cf1b09a3bb825"
+            ],
+            [
+                "28540439.179abc"
+            ],
+            [
+                "57c5b93d.01ce58"
+            ]
+        ],
+        "outputLabels": [
+            "WL1",
+            "tba",
+            "RO SYS"
+        ]
+    },
+    {
+        "id": "28540439.179abc",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 6,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "H2O to add",
+        "format": "{{msg.payload}} L",
+        "layout": "row-spread",
+        "x": 470,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "57c5b93d.01ce58",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "RO SYS",
+        "links": [
+            "552500c1.d45d4"
+        ],
+        "x": 415,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4464abe3.e8ddf4",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "",
+        "topic": "sense/GH/WR1_T",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "ecbc64f8.cb5788",
+                "eb7406b0.f7c628"
+            ]
+        ]
+    },
+    {
+        "id": "35f1a90d.dd4ab6",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "a4377e8.8778b8",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "WR1_T",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "x": 440,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ecbc64f8.cb5788",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "",
+        "func": "var WR1_T = {}\n\nglobal.set(\"WR1_T\" , msg.payload)\n\nWR1_T.payload = msg.payload;\n\nreturn WR1_T;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "35f1a90d.dd4ab6",
+                "82138413.29fec8",
+                "8e245304ab577f8c"
+            ]
+        ]
+    },
+    {
+        "id": "e12aab99.0276d8",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "WR1_H",
+        "links": [
+            "1d056037.fee72"
+        ],
+        "x": 895,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4ad7850d.5686dc",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Water T (day)",
+        "func": "var WR1_H = {}\nvar WR1_T = {}\nWR1_T.payload = global.get(\"WR1_T\");\n\n\nif (WR1_T.payload > 26) {\n  WR1_H.payload = \"off\";\n  return WR1_H;\n}\n\nelse if(WR1_T.payload < 23){\n  WR1_H.payload = \"on\";\n  return WR1_H;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 140,
+        "wires": [
+            [
+                "e12aab99.0276d8"
+            ]
+        ]
+    },
+    {
+        "id": "11c1530d.27eb4d",
+        "type": "inject",
+        "z": "a685515c.958ab",
+        "name": "",
+        "repeat": "",
+        "crontab": "*/1 6-23 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 630,
+        "y": 140,
+        "wires": [
+            [
+                "4ad7850d.5686dc"
+            ]
+        ]
+    },
+    {
+        "id": "f32c91b0.8c5a7",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Water T (night)",
+        "func": "var WR1_H = {}\nvar WR1_T = {}\nWR1_T.payload = global.get(\"WR1_T\");\n\n\nif (WR1_T.payload > 49) {\n  WR1_H.payload = \"off\";\n  return WR1_H;\n}\n\nelse if(WR1_T.payload < 41){\n  WR1_H.payload = \"on\";\n  return WR1_H;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 180,
+        "wires": [
+            [
+                "e12aab99.0276d8"
+            ]
+        ]
+    },
+    {
+        "id": "43a07187.18d9d",
+        "type": "inject",
+        "z": "a685515c.958ab",
+        "name": "",
+        "repeat": "",
+        "crontab": "*/1 0-15 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "f32c91b0.8c5a7"
+            ]
+        ]
+    },
+    {
+        "id": "44335fb1.193d4",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 210,
+        "y": 20,
+        "wires": [
+            [
+                "3a47458b.de1bea",
+                "e0cacfd.fb6573"
+            ]
+        ]
+    },
+    {
+        "id": "eb7406b0.f7c628",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 230,
+        "y": 140,
+        "wires": [
+            [
+                "ecbc64f8.cb5788",
+                "35f1a90d.dd4ab6",
+                "8e245304ab577f8c"
+            ]
+        ]
+    },
+    {
+        "id": "f72f2fc1.8c4e7",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "",
+        "topic": "GH/CP1/CP1_T",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 100,
+        "y": 520,
+        "wires": [
+            [
+                "bb6718db.a1f138",
+                "3852a768.ef6828",
+                "7e0d72e3.75e01c"
+            ]
+        ]
+    },
+    {
+        "id": "bb6718db.a1f138",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global CP1_T",
+        "func": "global.set(\"CP1_T\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3852a768.ef6828",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 110,
+        "y": 480,
+        "wires": [
+            [
+                "bb6718db.a1f138",
+                "7e0d72e3.75e01c"
+            ]
+        ]
+    },
+    {
+        "id": "7e0d72e3.75e01c",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "CP1_T",
+        "mode": "link",
+        "links": [
+            "4e5cea3a.643244"
+        ],
+        "x": 275,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "4898a951.664b28",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "69e56224.213a5c"
+            ]
+        ]
+    },
+    {
+        "id": "aa48b8c6.055848",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "c9fd7fa3.0a7c"
+            ]
+        ]
+    },
+    {
+        "id": "1169dddb.bbc6d2",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "e76e11.8275a1f"
+            ]
+        ]
+    },
+    {
+        "id": "3474244b.02a49c",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "",
+        "topic": "GH/SML/S1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "9ce40653.2fd098",
+                "f1f4e8f8.503578",
+                "1131bd74.326443",
+                "21995383.97534c"
+            ]
+        ]
+    },
+    {
+        "id": "9ce40653.2fd098",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "SM1 (RBL1)",
+        "mode": "link",
+        "links": [
+            "b9331cfe.33a28",
+            "3287b8101192198a",
+            "3c169ee5d89d446f"
+        ],
+        "x": 655,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1131bd74.326443",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global GSM_1",
+        "func": "global.set(\"GSM_1\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 760,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f1f4e8f8.503578",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "88a60a4b.348278",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "RBL1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 730,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "21995383.97534c",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "1131bd74.326443",
+                "f1f4e8f8.503578",
+                "9ce40653.2fd098"
+            ]
+        ]
+    },
+    {
+        "id": "74ce4b49.d261c4",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "",
+        "topic": "GH/SML/S2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "59500c4f.e4b814",
+                "e4d24884.25f188",
+                "5d9f971.b1ecd68",
+                "b0ed24c768329b32"
+            ]
+        ]
+    },
+    {
+        "id": "e4d24884.25f188",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global GSM_2",
+        "func": "global.set(\"GSM_2\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 760,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "59500c4f.e4b814",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "88a60a4b.348278",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "RBL2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 730,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "5d9f971.b1ecd68",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "e4d24884.25f188",
+                "59500c4f.e4b814",
+                "b0ed24c768329b32"
+            ]
+        ]
+    },
+    {
+        "id": "ed77b8d8.dbe278",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "",
+        "topic": "GH/SML/S3",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 530,
+        "y": 520,
+        "wires": [
+            [
+                "1f20e141.9d6d2f",
+                "4e789ea4.c425d",
+                "134c5085.14c33f",
+                "628a0e87d4b088dd"
+            ]
+        ]
+    },
+    {
+        "id": "4e789ea4.c425d",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global GSM_3",
+        "func": "global.set(\"GSM_3\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f20e141.9d6d2f",
+        "type": "ui_text",
+        "z": "a685515c.958ab",
+        "group": "88a60a4b.348278",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "name": "",
+        "label": "GT1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 730,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "134c5085.14c33f",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 550,
+        "y": 480,
+        "wires": [
+            [
+                "4e789ea4.c425d",
+                "1f20e141.9d6d2f",
+                "628a0e87d4b088dd"
+            ]
+        ]
+    },
+    {
+        "id": "b0ed24c768329b32",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "SM2 (RBL2)",
+        "mode": "link",
+        "links": [
+            "812b326987da6e25",
+            "49b233c90de92c50",
+            "f98b26edf96f7473",
+            "5b4e634491332415"
+        ],
+        "x": 655,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "628a0e87d4b088dd",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "SM3 (GT1)",
+        "mode": "link",
+        "links": [
+            "1bd93b2b48d61851",
+            "1b5ced5c2e8f3e65",
+            "3d300b8fcbf66569"
+        ],
+        "x": 655,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "82138413.29fec8",
+        "type": "ui_chart",
+        "z": "a685515c.958ab",
+        "name": "WR1_T log",
+        "group": "41057037.261d2",
+        "order": 3,
+        "width": "6",
+        "height": "4",
+        "label": "WR1_T",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 450,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e245304ab577f8c",
+        "type": "ui_gauge",
+        "z": "a685515c.958ab",
+        "name": "WR1_T",
+        "group": "41057037.261d2",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "donut",
+        "title": "",
+        "label": "",
+        "format": "{{value}}°C",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#c0fbfe",
+            "#55e916",
+            "#ff0202"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 440,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b5bff16d0dad9473",
+        "type": "ui_chart",
+        "z": "a685515c.958ab",
+        "name": "WR1_L log",
+        "group": "41057037.261d2",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "WR1_L",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "25",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 750,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b4def65214f2ec8",
+        "type": "ui_gauge",
+        "z": "a685515c.958ab",
+        "name": "WR1_L",
+        "group": "41057037.261d2",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "gtype": "wave",
+        "title": "",
+        "label": " L",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "25",
+        "colors": [
+            "#c0fbfe",
+            "#55e916",
+            "#ff0202"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 740,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "340cf1b09a3bb825",
+        "type": "smooth",
+        "z": "a685515c.958ab",
+        "name": " ",
+        "property": "payload",
+        "action": "mean",
+        "count": "5",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 610,
+        "y": 40,
+        "wires": [
+            [
+                "5b4def65214f2ec8",
+                "b5bff16d0dad9473"
+            ]
+        ]
+    },
+    {
+        "id": "adca3b85b6a73e2b",
+        "type": "mqtt in",
+        "z": "a685515c.958ab",
+        "name": "",
+        "topic": "GH/CP1/CP1_M",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "f10466fd.86eac8",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 100,
+        "y": 620,
+        "wires": [
+            [
+                "f6a036212fb4e715",
+                "bf11f9643f41e63d",
+                "6fbfb9dc0c0b04cb"
+            ]
+        ]
+    },
+    {
+        "id": "f6a036212fb4e715",
+        "type": "function",
+        "z": "a685515c.958ab",
+        "name": "Global CP1_M",
+        "func": "global.set(\"CP1_M\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf11f9643f41e63d",
+        "type": "trigger",
+        "z": "a685515c.958ab",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "no data received",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "1",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 110,
+        "y": 580,
+        "wires": [
+            [
+                "f6a036212fb4e715",
+                "6fbfb9dc0c0b04cb"
+            ]
+        ]
+    },
+    {
+        "id": "6fbfb9dc0c0b04cb",
+        "type": "link out",
+        "z": "a685515c.958ab",
+        "name": "CP1_M",
+        "mode": "link",
+        "links": [
+            "948c6a94.4fce98",
+            "39460fec7f3c9456"
+        ],
+        "x": 275,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6e1a8f59.77509",
+        "type": "ui_switch",
+        "z": "1c8adb39.c01d05",
+        "name": "",
+        "label": "Irrigate S1 [RBL1]",
+        "tooltip": "",
+        "group": "69a05d8b.e97e44",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 480,
+        "y": 100,
+        "wires": [
+            [
+                "f762363b.d345a8",
+                "fcb06220.07f94"
+            ]
+        ]
+    },
+    {
+        "id": "f762363b.d345a8",
+        "type": "mqtt out",
+        "z": "1c8adb39.c01d05",
+        "name": "S1",
+        "topic": "NMCU_R2/C3",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 730,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7c53d3c5.b8baec",
+        "type": "ui_switch",
+        "z": "1c8adb39.c01d05",
+        "name": "",
+        "label": "Irrigate S2 [RBL2]",
+        "tooltip": "",
+        "group": "69a05d8b.e97e44",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 480,
+        "y": 160,
+        "wires": [
+            [
+                "489e023.dd9fdfc",
+                "fcb06220.07f94"
+            ]
+        ]
+    },
+    {
+        "id": "489e023.dd9fdfc",
+        "type": "mqtt out",
+        "z": "1c8adb39.c01d05",
+        "name": "S2",
+        "topic": "NMCU_R2/C4",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 730,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "31d42f8.8b7dad",
+        "type": "ui_switch",
+        "z": "1c8adb39.c01d05",
+        "name": "",
+        "label": "Irrigate S3 [GT1]",
+        "tooltip": "",
+        "group": "69a05d8b.e97e44",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "fcb06220.07f94",
+                "94cd5727.1f1f18"
+            ]
+        ]
+    },
+    {
+        "id": "94cd5727.1f1f18",
+        "type": "mqtt out",
+        "z": "1c8adb39.c01d05",
+        "name": "S3",
+        "topic": "NMCU_R2/C5",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 730,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "cd1408b5.bb9948",
+        "type": "ui_switch",
+        "z": "1c8adb39.c01d05",
+        "name": "",
+        "label": "Irrigate S4",
+        "group": "69a05d8b.e97e44",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "a46e01fb.ca776",
+                "fcb06220.07f94"
+            ]
+        ]
+    },
+    {
+        "id": "a46e01fb.ca776",
+        "type": "mqtt out",
+        "z": "1c8adb39.c01d05",
+        "name": "S4",
+        "topic": "NMCU_R2/C6",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 730,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c8d9af43.7e4b8",
+        "type": "ui_switch",
+        "z": "1c8adb39.c01d05",
+        "name": "",
+        "label": "Irrigate S5",
+        "group": "69a05d8b.e97e44",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "dd14f963.69ae68",
+                "fcb06220.07f94"
+            ]
+        ]
+    },
+    {
+        "id": "dd14f963.69ae68",
+        "type": "mqtt out",
+        "z": "1c8adb39.c01d05",
+        "name": "S5",
+        "topic": "NMCU_R2/C7",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 730,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "53c0cc8c.c76024",
+        "type": "ui_switch",
+        "z": "1c8adb39.c01d05",
+        "name": "",
+        "label": "Irrigate S6 []",
+        "group": "69a05d8b.e97e44",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "dbfefeaa.79197",
+                "fcb06220.07f94"
+            ]
+        ]
+    },
+    {
+        "id": "dbfefeaa.79197",
+        "type": "mqtt out",
+        "z": "1c8adb39.c01d05",
+        "name": "S6",
+        "topic": "NMCU_R2/C8",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 730,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fcb06220.07f94",
+        "type": "link out",
+        "z": "1c8adb39.c01d05",
+        "name": "Irrigate: ON",
+        "links": [
+            "51cf183c.393c88"
+        ],
+        "x": 635,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "82d7a46d.dcf0f8",
+        "type": "link in",
+        "z": "1c8adb39.c01d05",
+        "name": "Irrigate: OFF",
+        "links": [
+            "ed682234.45ca9"
+        ],
+        "x": 315,
+        "y": 60,
+        "wires": [
+            [
+                "6e1a8f59.77509",
+                "7c53d3c5.b8baec",
+                "31d42f8.8b7dad",
+                "cd1408b5.bb9948",
+                "c8d9af43.7e4b8",
+                "53c0cc8c.c76024"
+            ]
+        ]
+    },
+    {
+        "id": "b7809242.81eb9",
+        "type": "function",
+        "z": "1c8adb39.c01d05",
+        "name": "if",
+        "func": "var GSM_1 = global.get(\"GSM_1\");\n\nif (GSM_1 < 375){     // 360 = completely dry\n  msg.payload=\"on\";\n  return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 100,
+        "wires": [
+            [
+                "6e1a8f59.77509"
+            ]
+        ]
+    },
+    {
+        "id": "5d1db843.b336f8",
+        "type": "inject",
+        "z": "1c8adb39.c01d05",
+        "name": "On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 12 * * *",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "b7809242.81eb9"
+            ]
+        ]
+    },
+    {
+        "id": "fdc6034d.4d98d",
+        "type": "function",
+        "z": "1c8adb39.c01d05",
+        "name": "if",
+        "func": "var GSM_2 = global.get(\"GSM_2\");\n\nif (GSM_2 < 375){     // 360\n  msg.payload=\"on\";\n  return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "7c53d3c5.b8baec"
+            ]
+        ]
+    },
+    {
+        "id": "bbc92a86.c93ec8",
+        "type": "function",
+        "z": "1c8adb39.c01d05",
+        "name": "if",
+        "func": "var GSM_3 = global.get(\"GSM_3\");\n\nif (GSM_3 < 410){     // 360 = dry af\n  msg.payload=\"on\";\n  return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "31d42f8.8b7dad"
+            ]
+        ]
+    },
+    {
+        "id": "44c30510ed397cad",
+        "type": "inject",
+        "z": "1c8adb39.c01d05",
+        "name": "On",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 12 * * *",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "fdc6034d.4d98d"
+            ]
+        ]
+    },
+    {
+        "id": "e6be2cf7.9fc06",
+        "type": "ui_chart",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH_H log",
+        "group": "4058e819.b1b4c8",
+        "order": 5,
+        "width": "6",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 740,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "421942a4.3fd1ac",
+        "type": "ui_gauge",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "group": "4058e819.b1b4c8",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "donut",
+        "title": "GH_T",
+        "label": "",
+        "format": "{{value}}°C",
+        "min": "0",
+        "max": "50",
+        "colors": [
+            "#c0fbfe",
+            "#55e916",
+            "#ff0202"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 150,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e842f106.84168",
+        "type": "join",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "d9b8c566.6ecc18"
+            ]
+        ]
+    },
+    {
+        "id": "d9b8c566.6ecc18",
+        "type": "csv",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "5219c0d8.6fdee"
+            ]
+        ]
+    },
+    {
+        "id": "cb87667e.3df9c8",
+        "type": "join",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "211f19a3.87e336"
+            ]
+        ]
+    },
+    {
+        "id": "211f19a3.87e336",
+        "type": "csv",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "temp,date,time,humi",
+        "x": 610,
+        "y": 120,
+        "wires": [
+            [
+                "3a2da6e4.27e5fa"
+            ]
+        ]
+    },
+    {
+        "id": "5603375b.fa6348",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "514cef4e.a0927",
+            "84275de8.cd80a",
+            "a0e207fb.f65f48"
+        ],
+        "x": 515,
+        "y": 100,
+        "wires": [
+            [
+                "cb87667e.3df9c8"
+            ]
+        ]
+    },
+    {
+        "id": "3a2da6e4.27e5fa",
+        "type": "file",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH/H_ID",
+        "filename": "/home/pi/GH/H_ID",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5219c0d8.6fdee",
+        "type": "file",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH/T_ID",
+        "filename": "/home/pi/GH/T_ID",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d42df69b.2d22d8",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "NILL (LoD",
+        "links": [
+            "ec06aa82.919d18",
+            "1cfc8e58.94f2b2",
+            "fa8d7300.3753"
+        ],
+        "x": 515,
+        "y": 20,
+        "wires": [
+            [
+                "f760a61.4f54058"
+            ]
+        ]
+    },
+    {
+        "id": "a43ef220.54d1a",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "NILL (LoD",
+        "links": [
+            "ec06aa82.919d18",
+            "1cfc8e58.94f2b2",
+            "fa8d7300.3753"
+        ],
+        "x": 55,
+        "y": 120,
+        "wires": [
+            [
+                "421942a4.3fd1ac"
+            ]
+        ]
+    },
+    {
+        "id": "a2140319.8439f",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "T [AIR]",
+        "links": [
+            "54db5df0.549c44"
+        ],
+        "x": 55,
+        "y": 160,
+        "wires": [
+            [
+                "e842f106.84168",
+                "62c3fd09.9a9a44",
+                "421942a4.3fd1ac"
+            ]
+        ]
+    },
+    {
+        "id": "d84b2850.874bd8",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "1ce77316.98e0ed"
+        ],
+        "x": 515,
+        "y": 60,
+        "wires": [
+            [
+                "cb87667e.3df9c8",
+                "f760a61.4f54058",
+                "f9332f16.3335a"
+            ]
+        ]
+    },
+    {
+        "id": "d8d5a5a5.5b1d08",
+        "type": "ui_chart",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH_CO₂ log",
+        "group": "4058e819.b1b4c8",
+        "order": 6,
+        "width": "6",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "2000",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 750,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5807621a.f6ccec",
+        "type": "ui_gauge",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "group": "4058e819.b1b4c8",
+        "order": 3,
+        "width": "6",
+        "height": "4",
+        "gtype": "donut",
+        "title": "GH_CO₂",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#ffffff",
+            "#03ff00",
+            "#2b19c8"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 610,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "fe5c88fd.1dc1e8",
+        "type": "join",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "fb4df0ba.3144a"
+            ]
+        ]
+    },
+    {
+        "id": "fb4df0ba.3144a",
+        "type": "csv",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "temp,date,time,humi",
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "b986724c.61616"
+            ]
+        ]
+    },
+    {
+        "id": "64c6bec4.4ac1a",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "514cef4e.a0927",
+            "84275de8.cd80a",
+            "a0e207fb.f65f48"
+        ],
+        "x": 515,
+        "y": 280,
+        "wires": [
+            [
+                "fe5c88fd.1dc1e8"
+            ]
+        ]
+    },
+    {
+        "id": "b986724c.61616",
+        "type": "file",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH/CO2",
+        "filename": "/home/pi/GH/CO2",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 620,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "24115bf3.7fe284",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "NILL (LoD",
+        "links": [
+            "ec06aa82.919d18",
+            "1cfc8e58.94f2b2",
+            "fa8d7300.3753"
+        ],
+        "x": 515,
+        "y": 200,
+        "wires": [
+            [
+                "5807621a.f6ccec"
+            ]
+        ]
+    },
+    {
+        "id": "1062d91c.db19e7",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH CO2",
+        "links": [
+            "8736861c.e66578"
+        ],
+        "x": 515,
+        "y": 240,
+        "wires": [
+            [
+                "5807621a.f6ccec",
+                "fe5c88fd.1dc1e8",
+                "46a2891b.e19748"
+            ]
+        ]
+    },
+    {
+        "id": "661e6368.b3ec7c",
+        "type": "join",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "1f065fcf.eedbb"
+            ]
+        ]
+    },
+    {
+        "id": "1f065fcf.eedbb",
+        "type": "csv",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "temp,date,time,humi",
+        "skip": 0,
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "2373ea18.573666"
+            ]
+        ]
+    },
+    {
+        "id": "37c8f49e.6a206c",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "514cef4e.a0927",
+            "84275de8.cd80a",
+            "a0e207fb.f65f48"
+        ],
+        "x": 35,
+        "y": 380,
+        "wires": [
+            [
+                "661e6368.b3ec7c"
+            ]
+        ]
+    },
+    {
+        "id": "2373ea18.573666",
+        "type": "file",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH/SM1",
+        "filename": "/home/pi/GH/SM1(RBL1)",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 140,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9331cfe.33a28",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "SM1 (RBL1)",
+        "links": [
+            "9ce40653.2fd098"
+        ],
+        "x": 35,
+        "y": 340,
+        "wires": [
+            [
+                "661e6368.b3ec7c",
+                "3ff38661.e8c7da"
+            ]
+        ]
+    },
+    {
+        "id": "174e4771.0f90d9",
+        "type": "ui_gauge",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "group": "1169b795.d4ac78",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "donut",
+        "title": "RBL1",
+        "label": "",
+        "format": "{{value}}%",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#ffa200",
+            "#ffffff",
+            "#4400ff"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 270,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e3805703.003ad8",
+        "type": "ui_chart",
+        "z": "30bf53e1.84dcdc",
+        "name": "SM1 log",
+        "group": "1169b795.d4ac78",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 280,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f760a61.4f54058",
+        "type": "ui_gauge",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "group": "4058e819.b1b4c8",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "gtype": "donut",
+        "title": "GH_H",
+        "label": "",
+        "format": "{{value}}%",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#969696",
+            "#c3fcff",
+            "#413758"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 610,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "b18f0c59.c8e67",
+        "type": "ui_chart",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH_T log",
+        "group": "4058e819.b1b4c8",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 280,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62c3fd09.9a9a44",
+        "type": "smooth",
+        "z": "30bf53e1.84dcdc",
+        "name": " ",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "b18f0c59.c8e67"
+            ]
+        ]
+    },
+    {
+        "id": "f9332f16.3335a",
+        "type": "smooth",
+        "z": "30bf53e1.84dcdc",
+        "name": " ",
+        "property": "payload",
+        "action": "mean",
+        "count": "20",
+        "round": "0",
+        "mult": "single",
+        "reduce": false,
+        "x": 610,
+        "y": 60,
+        "wires": [
+            [
+                "e6be2cf7.9fc06"
+            ]
+        ]
+    },
+    {
+        "id": "46a2891b.e19748",
+        "type": "smooth",
+        "z": "30bf53e1.84dcdc",
+        "name": " ",
+        "property": "payload",
+        "action": "mean",
+        "count": "50",
+        "round": "0",
+        "mult": "single",
+        "reduce": false,
+        "x": 610,
+        "y": 240,
+        "wires": [
+            [
+                "d8d5a5a5.5b1d08"
+            ]
+        ]
+    },
+    {
+        "id": "ab3fbf87.cce6e",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "514cef4e.a0927",
+            "84275de8.cd80a",
+            "a0e207fb.f65f48"
+        ],
+        "x": 55,
+        "y": 200,
+        "wires": [
+            [
+                "e842f106.84168"
+            ]
+        ]
+    },
+    {
+        "id": "3ff38661.e8c7da",
+        "type": "smooth",
+        "z": "30bf53e1.84dcdc",
+        "name": " ",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "0",
+        "mult": "single",
+        "reduce": false,
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "e3805703.003ad8",
+                "78ffb4347ed6aba5"
+            ]
+        ]
+    },
+    {
+        "id": "fb4e5cec.a8f65",
+        "type": "inject",
+        "z": "30bf53e1.84dcdc",
+        "name": "time",
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 70,
+        "y": 40,
+        "wires": [
+            [
+                "a667d503.d57208",
+                "da77b9ba.0a5898"
+            ]
+        ]
+    },
+    {
+        "id": "a667d503.d57208",
+        "type": "function",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local",
+        "func": "msg.payload = new Date().toLocaleString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 20,
+        "wires": [
+            [
+                "a0e207fb.f65f48"
+            ]
+        ]
+    },
+    {
+        "id": "a0e207fb.f65f48",
+        "type": "link out",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "5603375b.fa6348",
+            "ec3304f6.fb0098",
+            "a05e9596.3d20c8",
+            "64c6bec4.4ac1a",
+            "37c8f49e.6a206c",
+            "ab3fbf87.cce6e",
+            "6275e8f8.e72e48",
+            "817ddf37.6d249",
+            "699bbaaa.2d1df4",
+            "d09e97be4c76457f",
+            "03f141a2077761ce",
+            "0ec0614ffd8bdfa5"
+        ],
+        "x": 275,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "da77b9ba.0a5898",
+        "type": "trigger",
+        "z": "30bf53e1.84dcdc",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "#",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "10",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "outputs": 1,
+        "x": 230,
+        "y": 60,
+        "wires": [
+            [
+                "fa8d7300.3753"
+            ]
+        ]
+    },
+    {
+        "id": "fa8d7300.3753",
+        "type": "link out",
+        "z": "30bf53e1.84dcdc",
+        "name": "Lack of data",
+        "links": [
+            "d42df69b.2d22d8",
+            "a43ef220.54d1a",
+            "d0ec1887.916c78",
+            "bdd5acb4.f6bbb",
+            "a8715910.c0e0a8",
+            "9312b825.274488",
+            "24115bf3.7fe284",
+            "e4b6ffe0.371f7",
+            "941cc805.10c1e8",
+            "9d1d5013.ce1fc",
+            "bdaff20b.b654c",
+            "0d3043f706e32a88",
+            "3dd29ac562de26ad",
+            "8a180da911f055c6",
+            "8c765b2d1d833d3e",
+            "04b58019c6bb48f1",
+            "e972101a5ba9d788",
+            "48f6bece0d716244",
+            "4337583807237cbd"
+        ],
+        "x": 355,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e4b6ffe0.371f7",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "NILL (LoD",
+        "links": [
+            "fa8d7300.3753"
+        ],
+        "x": 35,
+        "y": 300,
+        "wires": [
+            [
+                "174e4771.0f90d9"
+            ]
+        ]
+    },
+    {
+        "id": "b0cb0360.3e758",
+        "type": "ui_gauge",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "group": "5cfc3e25.b8cb1",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "donut",
+        "title": "CP1_T",
+        "label": "",
+        "format": "{{value}}°C",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#ffffff",
+            "#55e916",
+            "#ff0202"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 620,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "fd84cd8f.a2228",
+        "type": "join",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "5b30502d.a4407"
+            ]
+        ]
+    },
+    {
+        "id": "5b30502d.a4407",
+        "type": "csv",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "x": 610,
+        "y": 520,
+        "wires": [
+            [
+                "cf98d4d2.889b98"
+            ]
+        ]
+    },
+    {
+        "id": "cf98d4d2.889b98",
+        "type": "file",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH/CP1_T",
+        "filename": "/home/pi/GH/CP1_T",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 630,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d1d5013.ce1fc",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "NILL (LoD",
+        "links": [
+            "ec06aa82.919d18",
+            "1cfc8e58.94f2b2",
+            "fa8d7300.3753"
+        ],
+        "x": 515,
+        "y": 420,
+        "wires": [
+            [
+                "b0cb0360.3e758"
+            ]
+        ]
+    },
+    {
+        "id": "4e5cea3a.643244",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "CP1_T",
+        "links": [
+            "7e0d72e3.75e01c"
+        ],
+        "x": 515,
+        "y": 460,
+        "wires": [
+            [
+                "fd84cd8f.a2228",
+                "1945f2a9.93597d",
+                "b0cb0360.3e758"
+            ]
+        ]
+    },
+    {
+        "id": "34f71a1.19f4fe6",
+        "type": "ui_chart",
+        "z": "30bf53e1.84dcdc",
+        "name": "CP1_T log",
+        "group": "5cfc3e25.b8cb1",
+        "order": 3,
+        "width": "6",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 750,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1945f2a9.93597d",
+        "type": "smooth",
+        "z": "30bf53e1.84dcdc",
+        "name": " ",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 610,
+        "y": 460,
+        "wires": [
+            [
+                "34f71a1.19f4fe6"
+            ]
+        ]
+    },
+    {
+        "id": "817ddf37.6d249",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "a0e207fb.f65f48"
+        ],
+        "x": 515,
+        "y": 500,
+        "wires": [
+            [
+                "fd84cd8f.a2228"
+            ]
+        ]
+    },
+    {
+        "id": "a361289.efca9d8",
+        "type": "ui_gauge",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "group": "5cfc3e25.b8cb1",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "gtype": "donut",
+        "title": "CP1_M",
+        "label": "",
+        "format": "{{value}}%",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#000000",
+            "#55e916",
+            "#ff0202"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 760,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "f84e4b8e.2fb438",
+        "type": "join",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "x": 610,
+        "y": 720,
+        "wires": [
+            [
+                "d8c477ca.42ac18"
+            ]
+        ]
+    },
+    {
+        "id": "d8c477ca.42ac18",
+        "type": "csv",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "x": 610,
+        "y": 740,
+        "wires": [
+            [
+                "60d1db8d.555714"
+            ]
+        ]
+    },
+    {
+        "id": "60d1db8d.555714",
+        "type": "file",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH/CP1_M",
+        "filename": "/home/pi/GH/CP1_M",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 630,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bdaff20b.b654c",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "NILL (LoD",
+        "links": [
+            "ec06aa82.919d18",
+            "1cfc8e58.94f2b2",
+            "fa8d7300.3753"
+        ],
+        "x": 515,
+        "y": 640,
+        "wires": [
+            [
+                "a361289.efca9d8"
+            ]
+        ]
+    },
+    {
+        "id": "948c6a94.4fce98",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "CP1_M",
+        "links": [
+            "6fbfb9dc0c0b04cb"
+        ],
+        "x": 515,
+        "y": 680,
+        "wires": [
+            [
+                "f84e4b8e.2fb438",
+                "c8605d53.f0e4d"
+            ]
+        ]
+    },
+    {
+        "id": "f530a5b8.312278",
+        "type": "ui_chart",
+        "z": "30bf53e1.84dcdc",
+        "name": "CP1_M log",
+        "group": "5cfc3e25.b8cb1",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8605d53.f0e4d",
+        "type": "smooth",
+        "z": "30bf53e1.84dcdc",
+        "name": " ",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 610,
+        "y": 680,
+        "wires": [
+            [
+                "f530a5b8.312278",
+                "a342b3271162b197"
+            ]
+        ]
+    },
+    {
+        "id": "699bbaaa.2d1df4",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "a0e207fb.f65f48"
+        ],
+        "x": 515,
+        "y": 720,
+        "wires": [
+            [
+                "f84e4b8e.2fb438"
+            ]
+        ]
+    },
+    {
+        "id": "e9e607c19f0cd117",
+        "type": "join",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "c7bfa64af9031bb2"
+            ]
+        ]
+    },
+    {
+        "id": "c7bfa64af9031bb2",
+        "type": "csv",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "temp,date,time,humi",
+        "skip": 0,
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "84804ba680e18da4"
+            ]
+        ]
+    },
+    {
+        "id": "d09e97be4c76457f",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "514cef4e.a0927",
+            "84275de8.cd80a",
+            "a0e207fb.f65f48"
+        ],
+        "x": 35,
+        "y": 560,
+        "wires": [
+            [
+                "e9e607c19f0cd117"
+            ]
+        ]
+    },
+    {
+        "id": "84804ba680e18da4",
+        "type": "file",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH/SM2",
+        "filename": "/home/pi/GH/SM2(RBL2)",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 140,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "812b326987da6e25",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "SM2 (RBL2)",
+        "links": [
+            "b0ed24c768329b32"
+        ],
+        "x": 35,
+        "y": 520,
+        "wires": [
+            [
+                "e9e607c19f0cd117",
+                "66cf68b8eb3ebfd4"
+            ]
+        ]
+    },
+    {
+        "id": "4175f5de9fc3bf6a",
+        "type": "ui_gauge",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "group": "1169b795.d4ac78",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "gtype": "donut",
+        "title": "RBL2",
+        "label": "",
+        "format": "{{value}}%",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#ff9500",
+            "#ffffff",
+            "#1100ff"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 270,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "be42d0d3a0d4c457",
+        "type": "ui_chart",
+        "z": "30bf53e1.84dcdc",
+        "name": "SM2 log",
+        "group": "1169b795.d4ac78",
+        "order": 5,
+        "width": "6",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 280,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66cf68b8eb3ebfd4",
+        "type": "smooth",
+        "z": "30bf53e1.84dcdc",
+        "name": " ",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "0",
+        "mult": "single",
+        "reduce": false,
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "be42d0d3a0d4c457",
+                "67fd34cdaf47b68d"
+            ]
+        ]
+    },
+    {
+        "id": "0d3043f706e32a88",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "NILL (LoD",
+        "links": [
+            "fa8d7300.3753"
+        ],
+        "x": 35,
+        "y": 480,
+        "wires": [
+            [
+                "4175f5de9fc3bf6a"
+            ]
+        ]
+    },
+    {
+        "id": "d8ea5ad51254d7d0",
+        "type": "join",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "cf9ec493fc8231b3"
+            ]
+        ]
+    },
+    {
+        "id": "cf9ec493fc8231b3",
+        "type": "csv",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "temp,date,time,humi",
+        "skip": 0,
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 130,
+        "y": 760,
+        "wires": [
+            [
+                "86b4976823d03d84"
+            ]
+        ]
+    },
+    {
+        "id": "03f141a2077761ce",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "Local time",
+        "links": [
+            "514cef4e.a0927",
+            "84275de8.cd80a",
+            "a0e207fb.f65f48"
+        ],
+        "x": 35,
+        "y": 740,
+        "wires": [
+            [
+                "d8ea5ad51254d7d0"
+            ]
+        ]
+    },
+    {
+        "id": "86b4976823d03d84",
+        "type": "file",
+        "z": "30bf53e1.84dcdc",
+        "name": "GH/SM3",
+        "filename": "/home/pi/GH/SM3(GT1)",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "x": 140,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1bd93b2b48d61851",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "SM3 (GT1)",
+        "links": [
+            "628a0e87d4b088dd"
+        ],
+        "x": 35,
+        "y": 700,
+        "wires": [
+            [
+                "d8ea5ad51254d7d0",
+                "09225141da043774"
+            ]
+        ]
+    },
+    {
+        "id": "e4c2e7269a7dee26",
+        "type": "ui_gauge",
+        "z": "30bf53e1.84dcdc",
+        "name": "",
+        "group": "1169b795.d4ac78",
+        "order": 3,
+        "width": "6",
+        "height": "4",
+        "gtype": "donut",
+        "title": "GT1",
+        "label": "",
+        "format": "{{value}}%",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#ff9500",
+            "#ffffff",
+            "#1100ff"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 270,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "d1c1c9c08fef5cae",
+        "type": "ui_chart",
+        "z": "30bf53e1.84dcdc",
+        "name": "SM3 log",
+        "group": "1169b795.d4ac78",
+        "order": 6,
+        "width": "6",
+        "height": "4",
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 280,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09225141da043774",
+        "type": "smooth",
+        "z": "30bf53e1.84dcdc",
+        "name": " ",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "0",
+        "mult": "single",
+        "reduce": false,
+        "x": 130,
+        "y": 700,
+        "wires": [
+            [
+                "d1c1c9c08fef5cae",
+                "56e33b28e81a457f"
+            ]
+        ]
+    },
+    {
+        "id": "3dd29ac562de26ad",
+        "type": "link in",
+        "z": "30bf53e1.84dcdc",
+        "name": "NILL (LoD",
+        "links": [
+            "fa8d7300.3753"
+        ],
+        "x": 35,
+        "y": 660,
+        "wires": [
+            [
+                "e4c2e7269a7dee26"
+            ]
+        ]
+    },
+    {
+        "id": "78ffb4347ed6aba5",
+        "type": "function",
+        "z": "30bf53e1.84dcdc",
+        "name": "%",
+        "func": "var SM1_min  = parseInt(global.get(\"SM1_min\"));\nvar SM1_max  = parseInt(global.get(\"SM1_max\"));\n\nvar SM1_raw = parseInt(msg.payload);\n\nvar conp = {}\n\nvar cp = {}\n\nconp.payload = (Math.abs((SM1_max-SM1_raw)/(SM1_max-SM1_min)*100-100)).toFixed(0);\n\n\nreturn conp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "174e4771.0f90d9"
+            ]
+        ]
+    },
+    {
+        "id": "67fd34cdaf47b68d",
+        "type": "function",
+        "z": "30bf53e1.84dcdc",
+        "name": "%",
+        "func": "var SM2_min  = parseInt(global.get(\"SM2_min\"));\nvar SM2_max  = parseInt(global.get(\"SM2_max\"));\n\nvar SM2_raw = parseInt(msg.payload);\n\nvar conp = {}\n\nvar cp = {}\n\nconp.payload = (Math.abs((SM2_max-parseInt(SM2_raw))/(SM2_max-SM2_min)*100-100)).toFixed(0);\n\n\nreturn conp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "4175f5de9fc3bf6a"
+            ]
+        ]
+    },
+    {
+        "id": "56e33b28e81a457f",
+        "type": "function",
+        "z": "30bf53e1.84dcdc",
+        "name": "%",
+        "func": "var SM3_min  = parseInt(global.get(\"SM3_min\"));\nvar SM3_max  = parseInt(global.get(\"SM3_max\"));\n\nvar SM3_raw = parseInt(msg.payload);\n\nvar conp = {}\n\nvar cp = {}\n\nconp.payload = (Math.abs((SM3_max-SM3_raw)/(SM3_max-SM3_min)*100-100)).toFixed(0);\n\n\nreturn conp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 700,
+        "wires": [
+            [
+                "e4c2e7269a7dee26"
+            ]
+        ]
+    },
+    {
+        "id": "a342b3271162b197",
+        "type": "function",
+        "z": "30bf53e1.84dcdc",
+        "name": "%",
+        "func": "var CP1_M_min  = parseInt(global.get(\"CP1_M_min\"));\nvar CP1_M_max  = parseInt(global.get(\"CP1_M_max\"));\n\nvar CP1_M_raw = parseInt(msg.payload);\n\nvar conp = {}\n\nvar cp = {}\n\nconp.payload = (Math.abs((CP1_M_max-CP1_M_raw)/(CP1_M_max-CP1_M_min)*100-100)).toFixed(0);\n\n\nreturn conp;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 680,
+        "wires": [
+            [
+                "a361289.efca9d8"
+            ]
+        ]
+    },
+    {
+        "id": "a98fc1f09a660f17",
+        "type": "function",
+        "z": "538fb6a8f2e20611",
+        "name": "Global SM1_max",
+        "func": "global.set(\"SM1_max\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9fd734638c0eb354",
+        "type": "ui_text_input",
+        "z": "538fb6a8f2e20611",
+        "name": "SM1_max",
+        "label": "Soaked value",
+        "tooltip": "IMMERSE SENSOR IN WATER",
+        "group": "6c9526c0d783228f",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "a98fc1f09a660f17"
+            ]
+        ]
+    },
+    {
+        "id": "9c6b51346da3ca71",
+        "type": "function",
+        "z": "538fb6a8f2e20611",
+        "name": "Global SM1_min",
+        "func": "global.set(\"SM1_min\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "096b1d8df81e68ce",
+        "type": "ui_text_input",
+        "z": "538fb6a8f2e20611",
+        "name": "SM1_min",
+        "label": "Dry value",
+        "tooltip": "USE DRY SENSOR",
+        "group": "6c9526c0d783228f",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "9c6b51346da3ca71"
+            ]
+        ]
+    },
+    {
+        "id": "3287b8101192198a",
+        "type": "link in",
+        "z": "538fb6a8f2e20611",
+        "name": "SM1 (RBL1)",
+        "links": [
+            "9ce40653.2fd098"
+        ],
+        "x": 55,
+        "y": 80,
+        "wires": [
+            [
+                "d3f4418f03095960"
+            ]
+        ]
+    },
+    {
+        "id": "8c765b2d1d833d3e",
+        "type": "link in",
+        "z": "538fb6a8f2e20611",
+        "name": "NILL (LoD",
+        "links": [
+            "fa8d7300.3753"
+        ],
+        "x": 55,
+        "y": 40,
+        "wires": [
+            [
+                "d3f4418f03095960"
+            ]
+        ]
+    },
+    {
+        "id": "d3f4418f03095960",
+        "type": "ui_text",
+        "z": "538fb6a8f2e20611",
+        "group": "6c9526c0d783228f",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "SM1 raw",
+        "label": "Analog reading",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 280,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9a11c23a3876ebec",
+        "type": "function",
+        "z": "538fb6a8f2e20611",
+        "name": "Global SM2_max",
+        "func": "global.set(\"SM2_max\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a46e92c3cf6f6c1",
+        "type": "ui_text_input",
+        "z": "538fb6a8f2e20611",
+        "name": "SM2_max",
+        "label": "Soaked value",
+        "tooltip": "IMMERSE SENSOR IN WATER",
+        "group": "14be319d8fc49a2b",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "9a11c23a3876ebec"
+            ]
+        ]
+    },
+    {
+        "id": "2bfc9ee7d82efbd7",
+        "type": "function",
+        "z": "538fb6a8f2e20611",
+        "name": "Global SM2_min",
+        "func": "global.set(\"SM2_min\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6997cc154ccedf8",
+        "type": "ui_text_input",
+        "z": "538fb6a8f2e20611",
+        "name": "SM2_min",
+        "label": "Dry value",
+        "tooltip": "USE DRY SENSOR",
+        "group": "14be319d8fc49a2b",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 100,
+        "y": 300,
+        "wires": [
+            [
+                "2bfc9ee7d82efbd7"
+            ]
+        ]
+    },
+    {
+        "id": "04b58019c6bb48f1",
+        "type": "link in",
+        "z": "538fb6a8f2e20611",
+        "name": "NILL (LoD",
+        "links": [
+            "fa8d7300.3753"
+        ],
+        "x": 55,
+        "y": 220,
+        "wires": [
+            [
+                "66bf6283e64688d5"
+            ]
+        ]
+    },
+    {
+        "id": "66bf6283e64688d5",
+        "type": "ui_text",
+        "z": "538fb6a8f2e20611",
+        "group": "14be319d8fc49a2b",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "SM2 raw",
+        "label": "Analog reading",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 280,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f98b26edf96f7473",
+        "type": "link in",
+        "z": "538fb6a8f2e20611",
+        "name": "SM2 (RBL2)",
+        "links": [
+            "b0ed24c768329b32"
+        ],
+        "x": 55,
+        "y": 260,
+        "wires": [
+            [
+                "66bf6283e64688d5"
+            ]
+        ]
+    },
+    {
+        "id": "1b5ced5c2e8f3e65",
+        "type": "link in",
+        "z": "538fb6a8f2e20611",
+        "name": "SM3 (GT1)",
+        "links": [
+            "628a0e87d4b088dd"
+        ],
+        "x": 55,
+        "y": 440,
+        "wires": [
+            [
+                "5c9bd4a049447e93"
+            ]
+        ]
+    },
+    {
+        "id": "0bd1dbdbf3ad9458",
+        "type": "function",
+        "z": "538fb6a8f2e20611",
+        "name": "Global SM3_max",
+        "func": "global.set(\"SM3_max\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67f67278ba23a62e",
+        "type": "ui_text_input",
+        "z": "538fb6a8f2e20611",
+        "name": "SM3_max",
+        "label": "Soaked value",
+        "tooltip": "IMMERSE SENSOR IN WATER",
+        "group": "117901e728d3ec2a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 100,
+        "y": 520,
+        "wires": [
+            [
+                "0bd1dbdbf3ad9458"
+            ]
+        ]
+    },
+    {
+        "id": "55554fd3447754d9",
+        "type": "function",
+        "z": "538fb6a8f2e20611",
+        "name": "Global SM3_min",
+        "func": "global.set(\"SM3_min\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5d4d434c4d14b3ee",
+        "type": "ui_text_input",
+        "z": "538fb6a8f2e20611",
+        "name": "SM3_min",
+        "label": "Dry value",
+        "tooltip": "USE DRY SENSOR",
+        "group": "117901e728d3ec2a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 100,
+        "y": 480,
+        "wires": [
+            [
+                "55554fd3447754d9"
+            ]
+        ]
+    },
+    {
+        "id": "48f6bece0d716244",
+        "type": "link in",
+        "z": "538fb6a8f2e20611",
+        "name": "NILL (LoD",
+        "links": [
+            "fa8d7300.3753"
+        ],
+        "x": 55,
+        "y": 400,
+        "wires": [
+            [
+                "5c9bd4a049447e93"
+            ]
+        ]
+    },
+    {
+        "id": "5c9bd4a049447e93",
+        "type": "ui_text",
+        "z": "538fb6a8f2e20611",
+        "group": "117901e728d3ec2a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "SM3 raw",
+        "label": "Analog reading",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 280,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "de7249e370e04259",
+        "type": "function",
+        "z": "538fb6a8f2e20611",
+        "name": "Global CP1_M_max",
+        "func": "global.set(\"CP1_M_max\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06d9598c775fe8a4",
+        "type": "ui_text_input",
+        "z": "538fb6a8f2e20611",
+        "name": "CP1_M_max",
+        "label": "Soaked value",
+        "tooltip": "IMMERSE SENSOR IN WATER",
+        "group": "689abfa1b4e28ba8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 530,
+        "y": 160,
+        "wires": [
+            [
+                "de7249e370e04259"
+            ]
+        ]
+    },
+    {
+        "id": "6b7282f291b30a82",
+        "type": "function",
+        "z": "538fb6a8f2e20611",
+        "name": "Global CP1_M_min",
+        "func": "global.set(\"CP1_M_min\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67673abfd39e1343",
+        "type": "ui_text_input",
+        "z": "538fb6a8f2e20611",
+        "name": "CP1_M_min",
+        "label": "Dry value",
+        "tooltip": "USE DRY SENSOR",
+        "group": "689abfa1b4e28ba8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 530,
+        "y": 120,
+        "wires": [
+            [
+                "6b7282f291b30a82"
+            ]
+        ]
+    },
+    {
+        "id": "4337583807237cbd",
+        "type": "link in",
+        "z": "538fb6a8f2e20611",
+        "name": "NILL (LoD",
+        "links": [
+            "fa8d7300.3753"
+        ],
+        "x": 475,
+        "y": 40,
+        "wires": [
+            [
+                "7680eb7c7b2eb814"
+            ]
+        ]
+    },
+    {
+        "id": "7680eb7c7b2eb814",
+        "type": "ui_text",
+        "z": "538fb6a8f2e20611",
+        "group": "689abfa1b4e28ba8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "CP1_M raw",
+        "label": "Analog reading",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 710,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "39460fec7f3c9456",
+        "type": "link in",
+        "z": "538fb6a8f2e20611",
+        "name": "CP1_M",
+        "links": [
+            "6fbfb9dc0c0b04cb"
+        ],
+        "x": 475,
+        "y": 80,
+        "wires": [
+            [
+                "7680eb7c7b2eb814"
+            ]
+        ]
+    },
+    {
+        "id": "23028e84.219ef2",
+        "type": "ui_text_input",
+        "z": "2fcdbf94.43f2d",
+        "name": "rec pHd Dose",
+        "label": "<font color= OrangeRed > Base Dose: </font>",
+        "group": "78cc1bfe.0d3f04",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6304a3d.03b588",
+        "type": "function",
+        "z": "2fcdbf94.43f2d",
+        "name": "dose",
+        "func": "msg.payload = \"dose\";\nreturn msg;\n\n/*\nmsg2 = \"dose\";\nmsg3 = \"dose\";\n\nreturn [ [msg1],[msg2],[msg3] ];\n*/",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "f32f08e8.30c0f8",
+                "b3a4ea2a.635898"
+            ]
+        ]
+    },
+    {
+        "id": "b3a4ea2a.635898",
+        "type": "delay",
+        "z": "2fcdbf94.43f2d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "b3ec616.44003a"
+            ]
+        ]
+    },
+    {
+        "id": "f32f08e8.30c0f8",
+        "type": "link out",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE N1",
+        "links": [
+            "c310f79d.ab1c18",
+            "f8246ef5.45a31",
+            "2631f72d.7e5038",
+            "acc99c5a.e60e3",
+            "a9e61603.348eb8"
+        ],
+        "x": 335,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b3ec616.44003a",
+        "type": "link out",
+        "z": "2fcdbf94.43f2d",
+        "name": "DOSE N4",
+        "links": [
+            "aa6e968d.7b0f88"
+        ],
+        "x": 495,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "27991f54.fb34b",
+        "type": "ui_toast",
+        "z": "2fcdbf94.43f2d",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "outputs": 1,
+        "ok": "YES",
+        "cancel": "NO",
+        "topic": "Dose nutes?",
+        "name": "Dose nutes?",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "d6304a3d.03b588"
+            ]
+        ]
+    },
+    {
+        "id": "942aaa29.ac3f88",
+        "type": "ui_text_input",
+        "z": "2fcdbf94.43f2d",
+        "name": "rec pH+ dose",
+        "label": "<font color= SkyBlue > Acid Dose: </font>",
+        "group": "78cc1bfe.0d3f04",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "mode": "text",
+        "delay": "1",
+        "topic": "",
+        "x": 460,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb9abd9b.489dd",
+        "type": "mqtt out",
+        "z": "2fcdbf94.43f2d",
+        "name": "N1",
+        "topic": "NMCU_SMPP/N1",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 270,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "cf64e8d0.bd9f68",
+        "type": "ui_button",
+        "z": "2fcdbf94.43f2d",
+        "name": "dose N1",
+        "group": "495fa615.6df518",
+        "order": 11,
+        "width": "6",
+        "height": "3",
+        "passthru": false,
+        "label": "dose Molasses",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "MediumOrchid",
+        "className": "",
+        "icon": "opacity",
+        "payload": "dose",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "fb9abd9b.489dd",
+                "7dd2473f.a58cf8"
+            ]
+        ]
+    },
+    {
+        "id": "dfe68e2b.7220e",
+        "type": "ui_button",
+        "z": "2fcdbf94.43f2d",
+        "name": "dose N4",
+        "group": "495fa615.6df518",
+        "order": 13,
+        "width": "6",
+        "height": "3",
+        "passthru": false,
+        "label": "dose SWP",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "opacity",
+        "payload": "dose",
+        "payloadType": "str",
+        "topic": "NMCU_SMPP/N4",
+        "topicType": "str",
+        "x": 520,
+        "y": 40,
+        "wires": [
+            [
+                "262132aa.24cd0e",
+                "763f21c4.581aa"
+            ]
+        ]
+    },
+    {
+        "id": "262132aa.24cd0e",
+        "type": "mqtt out",
+        "z": "2fcdbf94.43f2d",
+        "name": "N4",
+        "topic": "NMCU_SMPP/N4",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f10466fd.86eac8",
+        "x": 710,
+        "y": 100,
+        "wires": [],
+        "info": "SPML_D to be calibrated"
+    },
+    {
+        "id": "a53ccbfd.4aee38",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "N1 Dose",
+        "links": [
+            "cd114c59.bc6af"
+        ],
+        "x": 155,
+        "y": 100,
+        "wires": [
+            [
+                "fb9abd9b.489dd"
+            ]
+        ]
+    },
+    {
+        "id": "c02273e6.c5f8b",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "N4 Calculated Dose",
+        "links": [
+            "45a640d0.623d8",
+            "a0ffe2ed.65d9b"
+        ],
+        "x": 575,
+        "y": 100,
+        "wires": [
+            [
+                "262132aa.24cd0e"
+            ]
+        ]
+    },
+    {
+        "id": "fddce7ad.f93ff8",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "dose N1",
+        "links": [
+            "bbeb3b00.01f908"
+        ],
+        "x": 155,
+        "y": 60,
+        "wires": [
+            [
+                "fb9abd9b.489dd"
+            ]
+        ]
+    },
+    {
+        "id": "8f37a959.3df648",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "dose N4",
+        "links": [
+            "d55de37d.791a7"
+        ],
+        "x": 575,
+        "y": 60,
+        "wires": [
+            [
+                "262132aa.24cd0e"
+            ]
+        ]
+    },
+    {
+        "id": "74521f80.817ed",
+        "type": "link out",
+        "z": "2fcdbf94.43f2d",
+        "name": "SMPP",
+        "links": [
+            "f939e1ab.645c9"
+        ],
+        "x": 375,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "7dd2473f.a58cf8",
+        "type": "change",
+        "z": "2fcdbf94.43f2d",
+        "name": "on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 20,
+        "wires": [
+            [
+                "74521f80.817ed",
+                "987df25.129171"
+            ]
+        ]
+    },
+    {
+        "id": "987df25.129171",
+        "type": "delay",
+        "z": "2fcdbf94.43f2d",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 40,
+        "wires": [
+            [
+                "e112023d.515d6"
+            ]
+        ]
+    },
+    {
+        "id": "e112023d.515d6",
+        "type": "change",
+        "z": "2fcdbf94.43f2d",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 60,
+        "wires": [
+            [
+                "74521f80.817ed"
+            ]
+        ]
+    },
+    {
+        "id": "62da1ce2.3de914",
+        "type": "link out",
+        "z": "2fcdbf94.43f2d",
+        "name": "SMPP",
+        "links": [
+            "f939e1ab.645c9"
+        ],
+        "x": 815,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "763f21c4.581aa",
+        "type": "change",
+        "z": "2fcdbf94.43f2d",
+        "name": "on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 20,
+        "wires": [
+            [
+                "62da1ce2.3de914",
+                "bde80d52.5c8c2"
+            ]
+        ]
+    },
+    {
+        "id": "bde80d52.5c8c2",
+        "type": "delay",
+        "z": "2fcdbf94.43f2d",
+        "name": "delay",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 40,
+        "wires": [
+            [
+                "69b54b45.5a4ed4"
+            ]
+        ]
+    },
+    {
+        "id": "69b54b45.5a4ed4",
+        "type": "change",
+        "z": "2fcdbf94.43f2d",
+        "name": "off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 60,
+        "wires": [
+            [
+                "62da1ce2.3de914"
+            ]
+        ]
+    },
+    {
+        "id": "a9e61603.348eb8",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "",
+        "links": [
+            "f32f08e8.30c0f8"
+        ],
+        "x": 155,
+        "y": 20,
+        "wires": [
+            [
+                "7dd2473f.a58cf8"
+            ]
+        ]
+    },
+    {
+        "id": "aa6e968d.7b0f88",
+        "type": "link in",
+        "z": "2fcdbf94.43f2d",
+        "name": "",
+        "links": [
+            "b3ec616.44003a"
+        ],
+        "x": 575,
+        "y": 20,
+        "wires": [
+            [
+                "763f21c4.581aa"
+            ]
+        ]
+    },
+    {
+        "id": "da275388.3c263",
+        "type": "ui_button",
+        "z": "620cacdb.71a004",
+        "name": "",
+        "group": "db6e0761.6988e8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Shut Down",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "55b18c55.7dfbf4"
+            ]
+        ]
+    },
+    {
+        "id": "55b18c55.7dfbf4",
+        "type": "exec",
+        "z": "620cacdb.71a004",
+        "command": "sudo shutdown -h now",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "shutdown -h now",
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b63a2c3a.3f103",
+        "type": "ui_button",
+        "z": "620cacdb.71a004",
+        "name": "",
+        "group": "db6e0761.6988e8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reboot",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "8d8ae352.51f76"
+            ]
+        ]
+    },
+    {
+        "id": "8d8ae352.51f76",
+        "type": "exec",
+        "z": "620cacdb.71a004",
+        "command": "sudo shutdown -r now",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "shutdown -r now",
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "41990d1e.f2aaf4",
+        "type": "exec",
+        "z": "620cacdb.71a004",
+        "command": "mosquitto -d",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "start mqtt broker",
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "da6ad143.6b708",
+        "type": "inject",
+        "z": "620cacdb.71a004",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "41990d1e.f2aaf4"
+            ]
+        ]
+    },
+    {
+        "id": "7d3d9c7a.3e0714",
+        "type": "comment",
+        "z": "620cacdb.71a004",
+        "name": "Reasoning:",
+        "info": "This was added to solve an issue where \"mosquitto\"\nwould not start after RPi booted up\n\nIt's on repeat as a \"fail safe\"",
+        "x": 350,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e3fdda17.8ad268",
+        "type": "inject",
+        "z": "6f435616.8d0098",
+        "name": "",
+        "repeat": "0.1",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "83822abd.4e2258"
+            ]
+        ]
+    },
+    {
+        "id": "b1851d51.0473d",
+        "type": "ui_numeric",
+        "z": "6f435616.8d0098",
+        "name": "Ideal pH",
+        "label": "Ideal",
+        "group": "b83c8b6f.4d1368",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": "5",
+        "max": "7",
+        "step": "0.1",
+        "x": 80,
+        "y": 40,
+        "wires": [
+            [
+                "fdea5418.e87008"
+            ]
+        ]
+    },
+    {
+        "id": "83822abd.4e2258",
+        "type": "function",
+        "z": "6f435616.8d0098",
+        "name": "pH dose calc",
+        "func": "var pHa = global.get(\"pHLVL\");\nvar pHb = global.get(\"pHgoal\");\nvar pHgoal = global.get(\"pHgoal\");\nvar pHLVL=global.get(\"pHLVL\");\nvar WL = global.get(\"WL\");  // [L]\nvar Macid = 0.0043;  //85% phosphoric acid [14.8 mol/L]\nvar Mbase = 0.05; //45% potassium hydroxide [11.7 mol/L]\nvar Ha=Math.pow(10,-pHa);   // [mol/L]\nvar Hb=Math.pow(10,-pHb);   // [mol/L]\nvar dH=Math.abs(Hb-Ha);     // [mol/L]\nvar pHmax = pHgoal+0.2;\nvar pHmin = pHgoal-0.1;\nvar base_dose;\nvar acid_dose;\nvar dose;\nvar doseL;\nvar doseml;\n\nvar msgX = { payload: 0 };\nvar msg2 = { payload:\"pH:\"+pHLVL };\nvar msg3 = { payload:\"pHgoal: \"+pHgoal };\nvar msg4 = { payload: doseml };\nvar msg5 = { payload:\"dH: \"+dH };\nvar msg6 = { payload:\"WL: \"+WL+\"L\" };\nvar msg7 = { payload:\"Ha: \"+Ha };\nvar msg8 = { payload:\"Hb: \"+Hb };\nvar msg9 = { payload:\"Dose: \"+doseml+\" ml\" };\n\nif (pHa>pHmax){\n  doseL=dH/Macid*WL;\n  doseml=(Math.round(doseL*1000*1000)/1000).toFixed(3);\n  msg4.payload=doseml;\n  msg8.payload=\"Dose acid:\"+doseml+\"ml\";\n  return [ [msg4],[msgX],[msg2,msg3,msg5,msg8] ];\n}\n\nif (pHa<pHmin){\n  doseL=dH/Mbase*WL;\n  doseml=(Math.round(doseL*1000*1000)/1000).toFixed(3);\n  msg4.payload=doseml;\n  msg8.payload=\"Dose alkali:\"+doseml+\"ml\";\n  return [ [msgX],[msg4],[msg2,msg3,msg5,msg8] ];\n}\n\nelse {\n  return [ [msgX],[msgX],[msg2,msg3,msg5] ];\n}\n",
+        "outputs": "3",
+        "noerr": 0,
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "f3748e51.2e204"
+            ],
+            [
+                "13468c2d.979534"
+            ],
+            [
+                "344aaa51.68b736"
+            ]
+        ],
+        "outputLabels": [
+            "pHd",
+            "pH+",
+            "info"
+        ]
+    },
+    {
+        "id": "fdea5418.e87008",
+        "type": "function",
+        "z": "6f435616.8d0098",
+        "name": "Global",
+        "func": "global.set(\"pHgoal\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 210,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0b8a2b4.99d18",
+        "type": "function",
+        "z": "6f435616.8d0098",
+        "name": "Global pH",
+        "func": "global.set(\"pHLVL\",msg.payload);\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 220,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d921468c.c83768",
+        "type": "mqtt in",
+        "z": "6f435616.8d0098",
+        "name": "pH",
+        "topic": "sense/pH",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "986f56f68e414ed6",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "b0b8a2b4.99d18",
+                "605b0be6.888984",
+                "b37043e7.fcab1",
+                "19933cc6.554d13"
+            ]
+        ]
+    },
+    {
+        "id": "f3748e51.2e204",
+        "type": "link out",
+        "z": "6f435616.8d0098",
+        "name": "pHd Calculated Dose",
+        "links": [
+            "25cb2ce8.04d634",
+            "752e3dc4.6cc9f4"
+        ],
+        "x": 335,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "605b0be6.888984",
+        "type": "ui_gauge",
+        "z": "6f435616.8d0098",
+        "name": "Gauge: pH",
+        "group": "e5023f0d.fc9fc",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "pH",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "11",
+        "colors": [
+            "#ff0000",
+            "#e6e600",
+            "#0080ff"
+        ],
+        "seg1": "4",
+        "seg2": "8",
+        "x": 450,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "19933cc6.554d13",
+        "type": "trigger",
+        "z": "6f435616.8d0098",
+        "name": "If not measured for",
+        "op1": "",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "15",
+        "extend": true,
+        "units": "s",
+        "reset": "",
+        "outputs": 1,
+        "x": 250,
+        "y": 200,
+        "wires": [
+            [
+                "605b0be6.888984",
+                "b37043e7.fcab1"
+            ]
+        ]
+    },
+    {
+        "id": "344aaa51.68b736",
+        "type": "debug",
+        "z": "6f435616.8d0098",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 390,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "13468c2d.979534",
+        "type": "link out",
+        "z": "6f435616.8d0098",
+        "name": "pH+ Calculated Dose",
+        "links": [
+            "b82a84d6.31b388",
+            "3132790f.631706",
+            "37a190a1.2dfd8"
+        ],
+        "x": 335,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b37043e7.fcab1",
+        "type": "ui_text",
+        "z": "6f435616.8d0098",
+        "group": "b83c8b6f.4d1368",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "name": "",
+        "label": "pH Level:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 440,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1202ad7b.83e493",
+        "type": "ui_toast",
+        "z": "6f435616.8d0098",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "",
+        "name": "HLpH",
+        "x": 430,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9427ac16.cd0b",
+        "type": "mqtt in",
+        "z": "6f435616.8d0098",
+        "name": "HLpH_ERR",
+        "topic": "sense/HLpH_ERR",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "986f56f68e414ed6",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "1e3f77ec.932708"
+            ]
+        ]
+    },
+    {
+        "id": "8e93b7f4.f97f18",
+        "type": "ui_toast",
+        "z": "6f435616.8d0098",
+        "position": "bottom right",
+        "displayTime": "4",
+        "highlight": "",
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "",
+        "name": "",
+        "x": 490,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1e3f77ec.932708",
+        "type": "function",
+        "z": "6f435616.8d0098",
+        "name": "ERR Codes",
+        "func": "var ERR = msg.payload;\n\nif (ERR == \"1\") {msg.payload = \"Bad connection.\";}\nif (ERR == \"2\") {msg.payload = \"The ADC-chip does not respond.\";}\nif (ERR == \"3\") {msg.payload = \"The ADC-chip does not work properly.\";}\nif (ERR == \"4\") {msg.payload = \"No EEPROM device found.\";}\nif (ERR == \"5\") {msg.payload = \"Invalid EEPROM-chip record.\";}\nif (ERR == \"6\") {msg.payload = \"No 1-wire device found.\";}\nif (ERR == \"7\") {msg.payload = \"Temperature sensor bad CRC response (probable presence of multiple 1-wire devices).\";}\nif (ERR == \"8\") {msg.payload = \"The temperature sensor ID does not match the user-set ID.\";}\nif (ERR == \"9\") {msg.payload = \"The temperature sensor is not the HomeLab type sensor (DS18B20).\";}\nif (ERR == \"10\") {msg.payload = \"The temperature sensor resolution is undefined.\";}\nif (ERR == \"11\") {msg.payload = \"No calibration data is available.  \";}\nif (ERR == \"12\") {msg.payload = \"Invalid buffer number for calibration point 1 (must be 1,2 or 3).\";}\nif (ERR == \"13\") {msg.payload = \"Invalid buffer number for calibration point 2 (must be 1,2 or 3).\";}\nif (ERR == \"14\") {msg.payload = \"The pH of the calibration buffers is too close (difference must be > 1.0 pH).\";}\nif (ERR == \"15\") {msg.payload = \"The buffer pH for calibration point 1 is out of the range 0 - 14 pH.\";}\nif (ERR == \"16\") {msg.payload = \"The buffer pH for calibration point 2 is out of the range 0 - 14 pH.\";}\nif (ERR == \"17\") {msg.payload = \"The voltage for calibration point 1 is out of range (theoretical value +-40 mV)*.\";}\nif (ERR == \"18\") {msg.payload = \"The voltage for calibration point 2 is out of range (theoretical value +-40 mV)*.\";}\nif (ERR == \"19\") {msg.payload = \"The temperature for calibration point 1 is out of the range 0°C - 100°C.\";}\nif (ERR == \"20\") {msg.payload = \"The temperature for calibration point 2 is out of the range 0°C - 100°C.\";}\nif (ERR == \"21\") {msg.payload = \"Invalid time and/or date for calibration point 1.\";}\nif (ERR == \"22\") {msg.payload = \"Invalid time and/or date for calibration point 2.\";}\nif (ERR == \"23\") {msg.payload = \"The time interval between the calibration points is longer than 50 min.\";}\nif (ERR == \"24\") {msg.payload = \"Invalid buffer number.\";}\nif (ERR == \"25\") {msg.payload = \"A parameter is out of limits.\";}\nif (ERR == \"26\") {msg.payload = \"Invalid calibration point number.\";}\nif (ERR == \"27\") {msg.payload = \"Can not set the temperature resolution.\";}\nif (ERR == \"28\") {msg.payload = \"Invalid LED setting.\";}\nif (ERR == \"33\") {msg.payload = \"Invalid request.\";}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 320,
+        "wires": [
+            [
+                "8e93b7f4.f97f18"
+            ]
+        ]
+    },
+    {
+        "id": "19a952ae.5a268d",
+        "type": "mqtt out",
+        "z": "6f435616.8d0098",
+        "name": "NMCU_pH",
+        "topic": "sense/pH",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "986f56f68e414ed6",
+        "x": 390,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "20b624e4.e9390c",
+        "type": "change",
+        "z": "6f435616.8d0098",
+        "name": "reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "reset",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "19a952ae.5a268d"
+            ]
+        ]
+    },
+    {
+        "id": "facc8d87.ad02",
+        "type": "inject",
+        "z": "6f435616.8d0098",
+        "name": "",
+        "repeat": "43200",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 70,
+        "y": 420,
+        "wires": [
+            [
+                "20b624e4.e9390c",
+                "54d6dd1e.035c14"
+            ]
+        ]
+    },
+    {
+        "id": "54d6dd1e.035c14",
+        "type": "link out",
+        "z": "6f435616.8d0098",
+        "name": "midnight trigger",
+        "links": [
+            "cdce7ede.d1209"
+        ],
+        "x": 155,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8af662a8.054dc",
+        "type": "mqtt out",
+        "z": "6f435616.8d0098",
+        "name": "NMCU_SMPP/pHd",
+        "topic": "NMCU_SMPP/pHd",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "986f56f68e414ed6",
+        "x": 170,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "1e28e912.824047",
+        "type": "ui_button",
+        "z": "6f435616.8d0098",
+        "name": "",
+        "group": "b83c8b6f.4d1368",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "dose Acid",
+        "color": "",
+        "bgcolor": "OrangeRed",
+        "icon": "opacity",
+        "payload": "dose",
+        "payloadType": "str",
+        "topic": "NMCU_SMPP/pHd",
+        "x": 140,
+        "y": 580,
+        "wires": [
+            [
+                "8af662a8.054dc",
+                "7ee2f9ca.59add8"
+            ]
+        ]
+    },
+    {
+        "id": "752e3dc4.6cc9f4",
+        "type": "link in",
+        "z": "6f435616.8d0098",
+        "name": "pHd Calculated Dose",
+        "links": [
+            "f3748e51.2e204"
+        ],
+        "x": 55,
+        "y": 540,
+        "wires": [
+            [
+                "dc09bd6e.42ae8"
+            ]
+        ]
+    },
+    {
+        "id": "dc09bd6e.42ae8",
+        "type": "ui_text",
+        "z": "6f435616.8d0098",
+        "group": "b83c8b6f.4d1368",
+        "order": 5,
+        "width": "3",
+        "height": "1",
+        "name": "pHd dose",
+        "label": "Calc",
+        "format": "{{msg.payload}} mL",
+        "layout": "col-center",
+        "x": 140,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "460741de.fb246",
+        "type": "ui_text",
+        "z": "6f435616.8d0098",
+        "group": "b83c8b6f.4d1368",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "name": "ACID",
+        "label": "",
+        "format": "<font color= OrangeRed > ACID </font>",
+        "layout": "col-center",
+        "x": 130,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7ee2f9ca.59add8",
+        "type": "link out",
+        "z": "6f435616.8d0098",
+        "name": "DOSE ACID",
+        "links": [
+            "c310f79d.ab1c18"
+        ],
+        "x": 255,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1b62b847.f2d5b8",
+        "type": "mqtt out",
+        "z": "6f435616.8d0098",
+        "name": "NMCU_SMPP/pHu",
+        "topic": "NMCU_SMPP/pHu",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "986f56f68e414ed6",
+        "x": 490,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "6a4ea220.3353fc",
+        "type": "ui_button",
+        "z": "6f435616.8d0098",
+        "name": "",
+        "group": "b83c8b6f.4d1368",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "dose Base",
+        "color": "",
+        "bgcolor": "SkyBlue",
+        "icon": "opacity",
+        "payload": "dose",
+        "payloadType": "str",
+        "topic": "NMCU_SMPP/pHd",
+        "x": 470,
+        "y": 580,
+        "wires": [
+            [
+                "1b62b847.f2d5b8",
+                "710378b5.b967a8"
+            ]
+        ]
+    },
+    {
+        "id": "dddcefa.d5fa81",
+        "type": "ui_text",
+        "z": "6f435616.8d0098",
+        "group": "b83c8b6f.4d1368",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "name": "pH+ dose",
+        "label": "Calc",
+        "format": "{{msg.payload}} mL",
+        "layout": "col-center",
+        "x": 460,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "37a190a1.2dfd8",
+        "type": "link in",
+        "z": "6f435616.8d0098",
+        "name": "pH+ Calculated Dose",
+        "links": [
+            "13468c2d.979534"
+        ],
+        "x": 375,
+        "y": 540,
+        "wires": [
+            [
+                "dddcefa.d5fa81"
+            ]
+        ]
+    },
+    {
+        "id": "1c37c84d.7ade78",
+        "type": "ui_text",
+        "z": "6f435616.8d0098",
+        "group": "b83c8b6f.4d1368",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "name": "BASE",
+        "label": "",
+        "format": "<font color= SkyBlue > BASE </font>",
+        "layout": "col-center",
+        "x": 450,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "710378b5.b967a8",
+        "type": "link out",
+        "z": "6f435616.8d0098",
+        "name": "DOSE BASE",
+        "links": [
+            "2631f72d.7e5038",
+            "c310f79d.ab1c18"
+        ],
+        "x": 595,
+        "y": 580,
+        "wires": []
+    }
+]
